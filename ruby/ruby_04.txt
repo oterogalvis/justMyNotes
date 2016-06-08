@@ -1,0 +1,51 @@
+Ruby
+	loop do or loop {}
+		Repeat.
+	break
+		Break current loop.
+	rand(0..10)
+		Create a random number. In the example is between 0 and 10.
+	while
+		Repeat while a condition is meet. Run when the condition is true.
+	until
+		Repeat until a condition is meet. Run when the condition is false. Oposite of while.
+	array.each do |data|
+		Executed and action for each data inside the array. In the example data = array[index]
+	hash.each do |key, value|
+		Executed and action for each pair inside the hash. You also can use .each_pair
+	hash.each_key do |key|
+		Executed and action for each key inside the hash.
+	hash.each_value do |value|
+		Executed and action for each value inside the hash.
+	#.times do |times|
+		Take a number(#) and execute the statements in the block that number(#) of times. |times| is optional.
+	for item in 1..10
+		Repeat a range or array.
+Example
+	~/Documents/classes/treehouse/ruby/example_07.rb
+Ruby
+	.class
+		Alow us to see what kind of class a variable is.
+	.new
+		Call the initialize method.
+	.methods
+		Return a list of all the differents methods that the class supports.
+	.sort
+		Method use for organized an array.
+	.respond_to?(method)
+		To know if a class respond to a specific method. Example: "jorge".respond_to?("upcase") => true
+	@
+		Create an instance variable.
+	initialize
+		The first call method after a new instance of class (or object) is made.
+	attr_reader
+		Allows us to access variables in a class from outside that class.
+	attr_writer
+		Allows us to re-writing attributes in a class.
+	attr_accessor
+		attr_reader + attr_writer
+example
+	~/Documents/classes/treehouse/ruby/example_08.rb
+Ruby
+	to_s
+		Is call when a object is printed.

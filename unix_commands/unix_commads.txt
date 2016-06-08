@@ -1,0 +1,97 @@
+Unix Commads
+	ls
+		List the items inside the folder.
+	ls -l
+		The -l flag stands for long, list items but showing more information.
+	ls -a
+		The -a flag stands for all, list items including hidden items (dotfiles).
+	clear
+		Clean the information in the terminal, is equal to use control+l.
+	pwd
+		Print Working Directory.
+	cd
+		Change location inside the directories.
+	~
+		Home Directory.
+	.
+		Current Directory.
+	..
+		Up a Directory.
+	less
+		Take the terminal and allow you to read .txt files.
+	more
+		Print the content of a .txt in the terminal.
+	cat
+		Print more than one .txt in the terminal.
+	nano
+		Text editor.
+	mv
+		Move or rename a file or directory.
+	cp
+		Copy files.
+	cp -r 
+		Copy directories.
+	rm 
+		Remove files.
+	rm -r
+		Remove directories.
+	mkdir
+		Create a directory.
+	mkdir -r
+		Create a group of directories inside each others.
+	whoami
+		Display the user you are currently logged in as.
+	sudo
+		Run special mode
+	adduser
+		Create user. Need expecial mode to be executed.
+	su
+		Allow you to log in a different user.
+	exit
+		Exits from current session.
+	drwxrwxrwx
+		The d stants for directory. rwx stands for read, write and execute. First permission is User, second Group, and third Other.
+	chmod
+		Chanche the permissions. r = 4. w = 2. x = 1. For example: chmod 731 file_a  => drwx-wx--x
+	chown
+		Change the owner of a file or directory. It require expecial mode to be executed.
+	!!
+		Most recently run commad.
+	top
+		Open task manager.
+	ps aux
+		View a full list of all processes.
+	ps aux | grep "process_name"
+		View a searched process.
+	ctrl + z
+		Stop or pause the current process.
+	ctrl + c
+		Terminated the current process.
+	fg
+		Bring the most recently stopped program to the foreground. Can go to any job if you add the job number at the end.
+	jobs
+		Print a list of jobs in this session.
+	&
+		Send programs to the background automatically. The "&" is located and the end of the command.
+	TERM
+		Request that the process terminates after any cleanup.
+	kill
+		Request termination of a process. Type the PID after the command kill.
+	kill -KILL
+		Kill process immediately. Use carefully.
+	man
+		Shows manual.
+	env
+		Print environment variables.
+	echo
+		Prints the arguments to the screen. Example: echo $HOME.
+	=
+		Create or change variable. No space needed. Example: PS1="hola$".
+	export
+		Export environment variables.
+	which
+		Print the location of a program.
+	echo $PATH
+		Print the path where all the programs are searched.
+	bash
+		Start a new session within your current session.

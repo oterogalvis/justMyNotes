@@ -1,0 +1,75 @@
+Ruby
+	+=
+		Equal to x = x + 1. Can be use with any math symbols as -, *, /, **, %.
+	==
+		Equal sign.
+	!=
+		Diferent.
+	>
+		Greater than. 
+	<
+		Less than.
+	>=
+		Greater than or equal.
+	<=
+		Less than or equal.	
+	.ord
+		Print decimal value.
+	.length
+		Print the number of caracters contain in the string.
+	.chomp
+		Returns a new string with the given record separator removed.The original variable can change using the exclamation point.
+	.to_s
+		To string.
+	.to_i
+		To integer.
+	.to_f
+		To float.
+	.to_a.
+		To array.
+	if
+		Do things based on whether or not some kind of condition is met.
+	elsif
+		Do things based on whether or not another condition beside if is met.
+	else
+		Do things if the condition is not met and we want to do something different.
+	case
+		The “case” keyword allows us to branch our code without as much repetition.
+	||
+		or
+	&&
+		and
+	.even?
+		Even number.
+	.odd?
+		Odd number.
+	!()
+		Not operator. Example: car1 == car2 car1 is equal a car2. !(car1 == car2) car1 is not equal to car2.
+Example
+	print "Please type your name: "
+	name = gets.chomp
+
+	if name == "Jorge"
+	  puts "That's my name, too!"
+	else
+	  puts "Hi #{name}!"
+	end
+
+	print "Modify your name. Type 'uppercase' or 'reverse': "
+	answer = gets.chomp.downcase
+
+
+	case answer (Using if)
+		when "reverse"
+		  puts "This is your name backwards:"
+		  puts name.reverse
+		when "uppercase"
+		  puts "This is your name in all uppercase letters:"
+		  puts name.upcase
+		when "both"
+		  puts name.reverse.upcase
+		else
+		  puts "Ok, maybe later."
+	end
+Result
+	ruby ~/Documents/classes/treehouse/ruby/example_03.rb

@@ -1,0 +1,72 @@
+Ruby
+	ruby -v
+		To check if Ruby is installed and see the version number.
+	irb
+		Launch an interactive ruby console by typing the following in to the Console.
+	puts
+		Display message on your screen.
+	=
+		Assignment operator.
+	#{}
+		Allow you to output the variable inside the curly braces.
+	gets
+		Allow you to introduce an input.
+	print
+		Display message on your screen.
+Example:
+	print "Please introduce your name: "
+	name = gets
+	puts "Hello #{name}, Who are you?"
+Result:
+	ruby ~/Documents/classes/treehouse/ruby/example_01.rb
+
+Ruby
+	"" , %Q() or <<-ANYWORD ANYWORD
+		Interpolate the content of the string.
+	'' or %q()
+		Doesn't interpolate the content of the string.
+	\n
+		Newline.
+	\t
+		Tab.
+	\s
+		Space.
+	.upcase
+		Uppercase a copy of the string. The original variable can change using the exclamation point.
+	.downcase
+		Lowercase a copy of the string. The original variable can change using the exclamation point.
+	.reverse
+		Reverse a copy of the string. The original variable can change using the exclamation point.
+	Fixnum
+		An complete number like: 1, 3, 12, 134.
+	float
+		A number with decimals like: 1.0, 3.4, 12.3, 13.4.
+	+
+		Addition.
+	-
+		Substration.
+	* 
+		Multiplication.
+	/
+		Division.
+	% 
+		Modulus, remainder.
+	** 
+		Exponent.
+	def
+		Create a method. It always have to be ended (end).
+	return
+		Get (input) data or variables back from the method.
+	#
+		Create a line of message that is not going to be read as code.
+Example:
+	def percentage(a, b)
+		c = a * 100 / b
+		puts "#{a} is the #{c}% of #{b}."
+	end
+
+	percentage(60, 120)
+	percentage(755,950)
+	percentage(43,89)
+Result:
+	ruby ~/Documents/classes/treehouse/ruby/example_02.rb

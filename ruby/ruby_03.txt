@@ -1,0 +1,65 @@
+Ruby
+	Array.new
+		Create new array.
+	%w
+		Enter strings without surrount it with quotes. Example: grocery_list = %w(milk eggs bread)
+	%W
+		Allows interpolation. Example: grocery_list = %w(#{item} eggs bread)
+	.inspect
+		Allows you to print the content of the array. Example: puts grocery_list.inspect
+	<< or .push()
+		Allows you to add item to the end of the array. Example: grocery_list << "carrots"
+	.unshift()
+		Allows yoy to add item to the beginning of the array. Example: grocery_list.unshift("carrots")
+	array[index] or .at(index)
+		Allows you access to a specific item.
+	.first and .last
+		Allows you to access to the first and last item in the array.
+	-index
+		Allows you to access to the items in a reverse orden.
+	.insert(index,"item")
+		Allows you to insert item in a specific location. Example: grocery_list.insert(2, "ice cream")
+	.length
+		Shows you how many items are inside the list.
+	.count
+		Count certain item in the array. Example: grocery_list.count("eggs")
+	.include?("item")
+		Tell you if a specific item is inside the array.
+	.pop
+		Returns and removes the last item of the array.
+	.shift
+		Returns and removes the first item of the array.
+	.slice(index)
+		Returns a group of items from a list. Example: grocery_list.slice(0,2,3)
+	.drop
+		We can use the drop method to take out a number of items from the beginning of the array. Don't modify the original array.
+	.delete_at(index)
+		Delete and item from the array.
+	Hash.new
+		Create new hash. Another way: food_hash = {"name" => "bread", group: "carbs"}
+	hash["key"] = value , hash.store("key" = value)
+		Allow you to create a key with an assigned vaule. The key can be added as "key" or :key.
+	.keys
+		Return array of all the diferents keys.
+	.has_key?("key") , key?("key") or member?("key")
+		Tell os if the hash have a specific key inside.
+	.fetch("key") or hash["key"]
+		Give the value of the key you pass in.
+	.has_value?("value") , value?("value") 
+		Tell os if the hash have a specific value inside.
+	.values_at(keys)
+		Return an array of the values for the keys that we passed in. Example: food.values_at("quantity", "brand")
+	.length
+		Return number of key value pairs in the hash.
+	.invert
+		Invert all keys and values.
+	.shift
+		Delete the first pair inside the hash.
+	.merge
+		Create a new hash with all the pairs from two diferents hashes. When key is the same the hash that is send into merge will overwrite its precedent.
+	.push
+		Add hash to an array. Example: grocery_list["items"].push(grocery_item)
+Practice
+	~/Documents/classes/treehouse/ruby/example_04.rb
+Example: List Creator
+	~/Documents/classes/treehouse/ruby/example_05.rb

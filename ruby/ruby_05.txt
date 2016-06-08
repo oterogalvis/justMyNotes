@@ -1,0 +1,32 @@
+!
+	Not operator, use to negate a bloolean value. Example: if !(car1 > car2)
+nil
+	The third boolean value, means nothing or empty.
+presedence
+	Order in which statements are evaluated in a program. 1&&2==1&&2 != (1&&2)==(1&&2)
+||=
+	Conditional assignment. Assign value to a variable if the variable is no already set.
+define?
+	Check whether or not a variable exist.
+method?
+	You can use an "?" when create a method that return a boolean.
+method!
+	You can use an "!" when create a method that change a variable. Also call bang method.
+?
+	The question mark's job is to pose a question to what comes before it. Example: find_index(name) ? true : false
+blocks
+	Statements between do & end or { & }. Can't use return statement inside blocks. Blocks need yield.
+implicit return
+	The return value of the last line of the block.
+yield
+	Execute the code inside the block after call the method. We can also yield a variable. Example: yield name, age
+.call
+	The same as yield (sends arguments to the blocks)(&argument). Example: argument.call(variable1, variable2)
+block_given?
+	Tell of whether or not a block was sent in to a method.
+sprintf
+	Print more decimals to a number. Example: puts sprintf("%0.2f", transaction[:amount])
+rjust or ljust
+	Justify text to right or left. Example: puts "Description".ljust(30) + "Amount".rjust(10)
+inject
+	Pendin****

@@ -1,0 +1,47 @@
+Git
+	git --version
+		Allows you to know the installed version of git.
+	git init directory_name
+		Create a directory with a repository inside.
+	git init
+		Use this command without project name will create a repository in the actual directory.
+	git add file_name
+		This command allow you to add a file to be tracking in the repository.
+	git commit -a
+		The -a flag means all, It tells git to commit all the changes it can find.
+	git commit -m "Commit message"
+		This allow you to write a commit message without open a text editor.
+	git status
+		This command show the changes to be committed and the untracked files.
+	git log
+		Allows you to see the commit historial.
+	git checkout 
+		After this command introduce the first 5 caracters of the commit code. An allow you to check out an old commit.
+	git checkout HEAD~1
+		HEAD~1 is a special commit identifier in git, it stands for the previous commit.
+	git checkout master
+		Allows you to come back to the most recent commit.
+	git diff 
+		After this command introduce the first 5 caracters of the first commit and then of the second commit. Display the differences between them.
+	git branch name
+		Allows you to create a brand of master.
+	git branch
+		Allows you to see the branches and in witch one you are.
+	git branch -D branch_name
+		Deletes branch.
+	git checkout branch_name
+		Allows you to switch between branches.
+	git checkout -b branch_name
+		Allows you to create and switch to the new branch.
+	git merge branch_name
+		Merge brach with master and fix the conflicts.
+	git clone link_address new_name
+		Clone a repositore, give a new name is optional.
+	git remote
+		Allows you to see a list of all remotes available to this repository.
+	git remote add remote_name link_address
+		Allows the original repository to communicate with its clone.
+	git push remote_name branch_address
+		Send changes from the brach back to the remote.
+	git pull remote_name brach_name
+		Bring chages from remote.

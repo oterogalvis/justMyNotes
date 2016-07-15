@@ -26,7 +26,7 @@ Unix Commads
 	nano
 		Text editor.
 	mv
-		Move or rename a file or directory.
+		Move or rename a file or directory. Example mv *.jpg images/
 	cp
 		Copy files.
 	cp -r 
@@ -59,6 +59,8 @@ Unix Commads
 		Most recently run commad.
 	top
 		Open task manager.
+	ps 
+		Process the user is running.
 	ps aux
 		View a full list of all processes.
 	ps aux | grep "process_name"
@@ -72,17 +74,17 @@ Unix Commads
 	jobs
 		Print a list of jobs in this session.
 	&
-		Send programs to the background automatically. The "&" is located and the end of the command.
-	TERM
-		Request that the process terminates after any cleanup.
+		Send programs to the background automatically. The "&" is located and the end of the command. Example: top & 
+	TERM (terminate)
+		Request that the process terminates after any cleanup (recomended). MAC: kill TERM
 	kill
-		Request termination of a process. Type the PID after the command kill.
+		Request termination of a process. Type the PID after the command kill (use with care).
 	kill -KILL
-		Kill process immediately. Use carefully.
+		Kill process immediately. (Use only if necesary).
 	man
 		Shows manual.
 	env
-		Print environment variables.
+		Print environment variables. Example: HOME, PATH, PS1.
 	echo
 		Prints the arguments to the screen. Example: echo $HOME.
 	=
@@ -95,3 +97,10 @@ Unix Commads
 		Print the path where all the programs are searched.
 	bash
 		Start a new session within your current session.
+	export
+		Set an environment variable that will be visible to child processes. Example: export MESSAGE="Hello friend"
+	modify path
+		Example: export PATH=$PATH:~/Documents/my_commmads/
+	Export file
+		The exported environment variables are save in the .bash_profile or .bashrc
+	

@@ -1,0 +1,9 @@
+Ruby 
+	Comparable module
+		Allows you to make your classes sortable and gives you convenience methods.
+	Math module
+		Provides math functionality such as sins, logs, tangents, and more. 
+	include
+		Include a peace of behavior from a module to a class.
+	Class methods
+		Methods that are called on a class and instance methods are methods that are called on an instance of a class. Example: self

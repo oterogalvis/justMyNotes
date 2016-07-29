@@ -7,3 +7,9 @@ Ruby
 		Include a peace of behavior from a module to a class.
 	Class methods
 		Methods that are called on a class and instance methods are methods that are called on an instance of a class. Example: self
+Example: 
+	./example_09.rb
+Ruby
+	extend
+		Extend keyword in Ruby will mix behavior in to a class rather than instances of a class.
+	

@@ -12,4 +12,8 @@ Example:
 Ruby
 	extend
 		Extend keyword in Ruby will mix behavior in to a class rather than instances of a class.
-	
+Example: 
+	./example_10.rb
+Ruby
+	.map
+		Modify the Array and return an array. Example: array.map {|item| item*2 }

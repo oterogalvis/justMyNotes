@@ -1,32 +1,74 @@
-module Fetcher
+module InventoriAble
 	def self.included(klass)
-		puts "#{klass} have been include"
-		attr_accessor :fetch_count
+		klass.extend(ClassMethods)
 	end
-	def fetch(item)
-		@fetch_count ||= 0
-		@fetch_count += 1
-		puts "[#{@fetch_count}]#{@name} will bring the #{item} back."
+	module ClassMethods
+		def create(attributes)
+			object = new(attributes)
+			instances.push(object)
+			return object
+		end
+		def instances
+			@instances ||= Array.new
+		end
+		def stock_report
+			print "-"*50,"\n"
+			puts "#{self.to_s} Stock Report"
+			print "-"*50,"\n"
+			instances.each do|instance| 
+				print "Name: #{instance.attributes[:name]}\t\t"
+				print "Size: #{instance.attributes[:size]}\t\t" if !instance.attributes[:size].nil?
+				print "Stock: #{instance.stock_count}\n"
+			end
+		end
+	end
+	def stock_count
+		@stock_count ||= 0
+	end
+	def stock_count=(number)
+		@stock_count = number
+	end
+	def in_stock?
+		stock_count > 0
 	end
 end
 
-class Dog
-	include Fetcher
-	def initialize(name)
-		@name = name
+module MyStore
+	class Shirt
+		include InventoriAble
+		attr_accessor :attributes
+		def initialize(attributes)
+			@attributes = attributes
+		end
+	end
+
+	class Pant
+		include InventoriAble
+		attr_accessor :attributes
+		def initialize(attributes)
+			@attributes = attributes
+		end
+	end
+
+	class Accessory
+		include InventoriAble
+		attr_accessor :attributes
+		def initialize(attributes)
+			@attributes = attributes
+		end
 	end
 end
 
-class Cat
-	include Fetcher
-	def initialize(name)
-		@name = name
-	end
-end
+shirt1 = MyStore::Shirt.create(name: "mtf", size: "l")
+shirt2 = MyStore::Shirt.create(name: "tbpob", size: "s")
+shirt1.stock_count = 10
+pant1 = MyStore::Pant.create(name: "Jeans", size: "l")
+pant2 = MyStore::Pant.create(name: "Jeans", size: "s")
+pant2.stock_count = 15
+belt1 = MyStore::Accessory.create(name: "Belt")
+belt2 = MyStore::Accessory.create(name: "Belt")
+belt1.stock_count = 20
 
-dog = Dog.new("Fido")
-dog.fetch("bone")
-dog.fetch("frisbee")
-
-cat = Cat.new("Garfield")
-cat.fetch("Laser Pointer")
+MyStore::Shirt.stock_report
+MyStore::Pant.stock_report
+MyStore::Accessory.stock_report

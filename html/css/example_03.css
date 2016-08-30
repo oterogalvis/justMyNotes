@@ -1,0 +1,18 @@
+a {
+	text-decoration: none;
+}
+#wrapper {
+	/* max-width asign the espace destinated to the contend*/
+	max-width: 940px;
+	/* margin recieve two values, first is the margin top-botton and second is left-right. */
+	/* auto just work with the espace left */
+	margin: 0 auto;
+	/* 5% padding to both sides of the element. */
+	padding: 0 5%;
+	background: orange;
+}
+#logo {
+	/* some properties can take values or keywords. */
+	text-align: center;
+	margin: 0;
+}

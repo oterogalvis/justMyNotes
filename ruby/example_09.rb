@@ -7,12 +7,12 @@ class AddPeople
 		menu
 	end
 	def open
-		if File.exist?("people.yml")
-			@people = YAML.load_file("people.yml")
+		if File.exist?("example_09.yml")
+			@people = YAML.load_file("example_09.yml")
 		end
 	end
 	def save
-		File.open("people.yml", "w") do |file|
+		File.open("example_09.yml", "w") do |file|
 			file.write(@people.to_yaml)
 		end
 	end

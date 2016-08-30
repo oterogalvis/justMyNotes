@@ -17,3 +17,51 @@ Example:
 Ruby
 	.map
 		Modify the Array and return an array. Example: array.map {|item| item*2 }
+	Ruby Core 
+		Contains the classes and modules that come with Ruby and make Ruby work. For example, Ruby Core contains many familiar classes that you have worked with so far: Array, Hash, Fixnum, and more.
+	Struct
+		Is a shortcut to creating a class with accessor methods. Example: Customer = Struct.new(:name, :email)
+	The Object and Kernel classes 
+		Are the root of all Ruby class and object functionality.
+	Object class 
+		Object is the base class that all Ruby classes inherit from. 
+	Kernel class
+		The Kernel module is included by the Object class and contains methods that can be used in all classes.
+	The File class 
+		Handles file input and output in Ruby. 
+Example:
+	./example_11.rb
+Ruby
+	The Marshal class 
+		In Ruby Core allows you to convert Ruby objects in to a data stream and back again.
+Example:
+	./example_12.rb
+Ruby
+	The Ruby Standard Library 
+		Contains larger pieces of functionality and must be specifically imported in to your programs. Some examples of standard library are utility classes for working with dates and times, serialization, network access and more.
+	The Ruby Date class 
+		Is used to represent dates in Ruby and it has no concept of time.
+	The DateTime and Time classes 
+		Add an additional component compared to the date class -- the concept of a time of day. 
+Example:
+	./example_13.rb
+Ruby 
+	JSON
+		JSON stands for JavaScript Object Notation and is a way of serializing data so you can access it later. 
+Example:
+	./example_14.rb
+Ruby
+	YAML
+		Stands for Yet Ain't Markup Language and is a common serialization format in use today by many Ruby projects.
+Example:
+	./example_15.rb
+Ruby
+	Base64
+		One of the many ways to encode binary data to text is using the base 64 encoding scheme. A binary encoding scheme will represent binary data in a text format. 
+Example:
+	./example_16.rb
+Ruby
+	Logger
+		Use to write data to a stream. The stream can be a file, standard output, the network, and more.
+Example:
+	./example_17.rb

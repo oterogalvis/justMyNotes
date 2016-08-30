@@ -1,0 +1,91 @@
+/* -------------- GENERAL -------------- */
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+#wrapper {
+	/* max-width asign the espace destinated to the contend*/
+	max-width: 940px;
+	/* margin recieve two values, first is the margin top-botton and second is left-right. */
+	/* auto just work with the espace left */
+	margin: 0 auto;
+	/* 5% padding to both sides of the element. */
+	padding: 0 5%;
+}
+a {
+	text-decoration: none;
+}
+
+
+
+/* -------------- HEADING -------------- */
+
+#logo {
+	/* some properties can take values or keywords. */
+	text-align: center;
+	margin: 0;
+}
+h1 {
+	/* first name of the font, sencond name of other font if first is not available */
+	font-family: 'Changa One', sans-serif;
+	margin: 15px 0px;
+	font-size: 1.75em;
+	/* unbold headline, headlines elements are bold by default. */
+	font-weight: normal;
+	/* line-height determine the amoung of space between each line of text. */
+	line-height: 0.8em;
+}
+h2 {
+	font-size: 0.75em;
+	/* first value == top, second == left & right, third == bottom */
+	margin: -5px 0 0;
+	font-weight: normal;
+}
+
+
+/* -------------- NAVIGATION -------------- */
+
+
+
+nav {
+	text-align: center;
+	padding: 10px 0;
+	margin: 20px 0 0;
+}
+
+/* -------------- FOOTER -------------- */
+
+
+
+footer {
+	font-size: 0.75em;
+	text-align: center;
+	padding-top: 50px;
+	color: #ccc;
+}
+
+/* -------------- COLORS -------------- */
+
+body {
+	background-color: #fff;
+	color: #999;
+}
+header {
+	background: #6ab47b;
+	border-color: #599a68; 
+}
+nav {
+	background: #599a68;
+}
+h1, h2 {
+	color: #fff;
+}
+a {
+	color: #6ab47b;
+}
+nav a, nav a:visited {
+	color: #fff;
+}
+nav a.selected, nav a:hover {
+	color: #32673f;
+}

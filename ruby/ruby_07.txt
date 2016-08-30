@@ -1,0 +1,30 @@
+Ruby 
+	Ruby Gem
+		Library that contains a specific piece of functionality as well as any files or assets related to that functionality.
+	https://rubygems.org/
+	https://www.ruby-toolbox.com/
+		Website allow you to find gems.
+	gem install name
+		name = name of the gem
+	gem install name -v 6.6.2
+		6.6.2 = any expecific version of the gem.
+	gem list
+		Display all the gems installed in the computer.
+	require "gem"
+		Allows you to use the installed gem in a simple app.
+	gem help
+		Get help with basics gem commands.
+	gem help commads
+		Get help with all gem commands.
+	gem update name
+		Get the latest version of the gem.
+	gem search name
+		Search for gems with the word name in the title.
+	gem unistall name
+		Unistall a complete gem or just a version. Use flag -v for specific version.
+	gem environment
+		Get all the environment info.
+	$LOAD_PATH
+		See the diferent places that ruby use search for files to load.
+	gem content name
+		To see how a gem functions internally.

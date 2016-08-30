@@ -1,0 +1,7 @@
+# Logfile created on 2016-08-27 15:15:50 -0400 by logger.rb/53141
+I, [2016-08-27T15:23:45.969108 #1118]  INFO -- : This is a info message.
+D, [2016-08-27T15:23:45.969128 #1118] DEBUG -- : This is a dibugging message.
+W, [2016-08-27T15:23:45.969138 #1118]  WARN -- : This is a warning message.
+F, [2016-08-27T15:23:45.969146 #1118] FATAL -- : This is a fatal message.
+E, [2016-08-27T15:23:45.969154 #1118] ERROR -- : This is a error message.
+A, [2016-08-27T15:23:45.969171 #1118]   ANY -- : This is a unknown message.

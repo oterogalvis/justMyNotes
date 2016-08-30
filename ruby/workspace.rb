@@ -1,3 +1,9 @@
-array = "3 6 8 4 2 4 7 7".split(" ").map { |x| x.to_i  }
-puts array.inject{|sum, x| sum += x}
+# ----------STRUCT--------------
+Customer = Struct.new(:name, :email)
 
+customer1 = Customer.new("Jorge", "oterogalvis@gmail.com")
+customer2 = Customer.new("Jesus", "jesus.javier.m@gmail.com")
+# customer3 = Customer.new("Jorge", "oterogalvis@gmail.com")
+
+customer1.each_pair {|x,y| print "#{x}: #{y}\n"}
+customer2.each_pair {|x,y| print "#{x}: #{y}\n"}

@@ -103,4 +103,39 @@ Unix Commads
 		Example: export PATH=$PATH:~/Documents/my_commmads/
 	Export file
 		The exported environment variables are save in the .bash_profile or .bashrc
-	
+	find ./ -name "hello.txt"
+		Print the path of "hello.txt" in ./ directory. It's allow to put more than one directory for search.
+	grep "is" "hello.txt"
+		Print out every line where it finds "is" inside the document "hello.txt"
+	grep -n "is" "hello.txt"
+		With the flag -n the number of the line is included.
+	grep -i "is" "hello.txt"
+		With the flag -i find the word wether is downcase or upcase.
+	grep -v "is" "hello.txt"
+		With the flag -v find lines that doesn't have "is" on it.
+	Piping
+		Take the output of one process and make it the imput of another process.
+	<
+		Redirection of the input from keyboard to a file. Example: ruby getting.rb < input.txt
+	> 
+		Redirection of the output to a file. Example: ruby printing.rb > output.txt	
+	>>
+		Redirection of the output to a file and append the new content to the end.
+	Command A | Command B
+		Pipe the aoutput of Command A to the input of Command B.
+	sort
+		Sort the line of standar input and sort it to standar output.
+	curl -O "link"
+		curl = Program for making request from the internet. -O = Flag allow you to save the file "link". Download.
+	tar -xvf
+		Extract from .tar
+	sudo apt-get update => mac: brew update
+		Update your package catalog on your computer.
+	sudo apt-get install "name" => mac: brew install "name"
+		Install package by name.
+	apt-get upgrade "name" => mac: brew upgrade "name"
+		Upgrade to the latest version of "name" installed.
+	apt-cache searh "name" => mac: brew search "name"
+		Search for package with "name" on it.
+	sudo apt-cache remove "name"
+		Remove package by name.

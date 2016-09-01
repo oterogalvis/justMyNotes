@@ -1,3 +1,4 @@
+# save and load
 class Player
 	attr_accessor :name, :progress
 	def initialize(name)

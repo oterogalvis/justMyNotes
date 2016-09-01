@@ -45,3 +45,5 @@ Git
 		Send changes from the brach back to the remote.
 	git pull remote_name brach_name
 		Bring chages from remote.
+	forking (github)
+		Cloning a GitHub repository to your own account.

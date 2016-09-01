@@ -5,4 +5,17 @@ Java
 		To execute code.
 	//
 		To comment.
-	
+	;
+		To close everyline.
+	CamelCase
+		The first letter is lowercase and the second capitalize. Example: firstName
+Example: "./example_00.java"
+	printf
+		Print formatted text. Use variables and special formatting instructions.
+	%s
+		Alloy string replacement. Example: "Hello, I'm %s", firstName
+	TIP
+		First declare a variable using it's data type, like String.
+		Then the set the variable un CamelCase.
+		Last asing the value.
+Example: "./example_01.java"

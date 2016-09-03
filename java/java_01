@@ -19,3 +19,33 @@ Example: "./example_00.java"
 		Then the set the variable un CamelCase.
 		Last asing the value.
 Example: "./example_01.java"
+	runtime errors
+		Errors that only can be found when the program is running.
+	int
+		Datatype for integers.
+	System.exit(0)
+		Allow you to exit the program.
+	Primitive
+		Special kind of datatype, they only give data. It's type in lowercase. 
+	Object datatypes
+		Non-primitive data types. They give methods or properties. It's type Capitalize. 
+	Wrapper type or Boxer type
+		Provide methods that can use to manipulate and produce primitive data.
+Example: "./example_02.java"
+	.equals()
+		Equivalent of == in java.
+	.equalsIgnoreCase
+		Equal than wether is upcase or downcase.
+	||
+		or
+	&&
+		and
+	While loop structure
+		do { "this" } while ("thisIsTrue")
+	.contains()
+		Allow you to know if a string contain a specific element.
+	.toLowerCase()
+		Change to lowercase.
+	.println
+		Print a line with a \n at the end. Likes puts in ruby.
+	

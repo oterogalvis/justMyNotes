@@ -113,7 +113,7 @@ Unix Commads
 		With the flag -i find the word wether is downcase or upcase.
 	grep -v "is" "hello.txt"
 		With the flag -v find lines that doesn't have "is" on it.
-	Piping
+	Piping "|"
 		Take the output of one process and make it the imput of another process.
 	<
 		Redirection of the input from keyboard to a file. Example: ruby getting.rb < input.txt
@@ -139,3 +139,5 @@ Unix Commads
 		Search for package with "name" on it.
 	sudo apt-cache remove "name"
 		Remove package by name.
+	&&
+		Use to execute more that one command at the same time.

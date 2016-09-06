@@ -48,4 +48,14 @@ Example: "./example_02.java"
 		Change to lowercase.
 	.println
 		Print a line with a \n at the end. Likes puts in ruby.
+Example: "./example_03.java"
+	TIP
+		Constans in uppercase.
+	final keyword
+		Final keyword make sure no one can change the value.
+	static keyword
+		Make a value accessible right of the class.
+
+	void keyword
+		It's assign to a method that return nothing.
 	

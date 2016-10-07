@@ -31,6 +31,8 @@ Example: "./example_01.java"
 		Non-primitive data types. They give methods or properties. It's type Capitalize. 
 	Wrapper type or Boxer type
 		Provide methods that can use to manipulate and produce primitive data.
+	.readLine()
+		Gets input.
 Example: "./example_02.java"
 	.equals()
 		Equivalent of == in java.
@@ -42,11 +44,12 @@ Example: "./example_02.java"
 		and
 	While loop structure
 		do { "this" } while ("thisIsTrue")
+		while (true) {"this"}
 	.contains()
 		Allow you to know if a string contain a specific element.
 	.toLowerCase()
 		Change to lowercase.
-	.println
+	.println()
 		Print a line with a \n at the end. Likes puts in ruby.
 Example: "./example_03.java"
 	TIP
@@ -55,7 +58,50 @@ Example: "./example_03.java"
 		Final keyword make sure no one can change the value.
 	static keyword
 		Make a value accessible right of the class.
-
 	void keyword
 		It's assign to a method that return nothing.
-	
+	TIP
+		To make a method that acept 0 to 1 argument you create two methods with the same name.
+	exceptions
+		To tell the user if there is any problem using our object.
+	throw keyword
+		To throw a exception.
+	try - catch keyword
+		To catch a exception.
+	iae.getMessage()
+		iea => IllegalArgumentException. Get the exception message.
+Example: "./example_04.java"
+	Separation of concerns
+		Separate the displaying portion of the code from the mage state and the behavior code.
+	TIP
+		"" are for strings 
+		'' are for char(characters)
+		You can sum stings.
+	indexOf()
+		Return the index of a specific char. If char not include in string return -1.
+	charAt()
+		Return the char of a specific index.
+	toCharArray();
+		Breaks the string into an array of chars.
+	forEachloop
+		Loop over arrays.
+		for (char letter : example.toCharArray()){}
+	length()
+		Tell you how many chars are in the string.
+	%d
+		Alloy decimal replacement. Example: "The number is %d", getNumber()
+	TIP
+		Always limite your scope to the story you are working on.
+Example: "./example_05.java"
+	isLetter(x)
+		Method that verify if the char 'x' is a letter. This method belong to the Character Wrapper.
+	toLowerCase(x)
+		Change a upcase letter to lowercase. This method belong to the Character Wrapper.
+	toUpperCase(x)
+		Change a lowercase letter to uppercase. This method belong to the Character Wrapper.
+	isLowerCase(x)
+		Returns true if the char is lowercase. This method belong to the Character Wrapper.
+	isUpperCase(x)
+		Returns true if the char is uppercase. This method belong to the Character Wrapper.
+	TIP
+		While loop using booleans and exceptions. Check Example_06_prompter.java

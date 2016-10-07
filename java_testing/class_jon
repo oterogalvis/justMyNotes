@@ -1,0 +1,38 @@
+Clusters
+	aws
+		Redshift => dmart
+		cloudera = Hadood(cdh) => Dlake
+
+	Azure  
+		Greemplum => dmart
+		cloudera => Dlake
+
+Tower
+	An app that lounches costumers. Use to test build process.
+
+Provisioner 
+	Lounches customers. RestAPI. 
+
+PDC = Private Data Cloud
+
+Security Gateway
+	Deal with traffict autside of costumers. Protect services from hacking attacks.
+
+
+Portal
+	RoR, Angular
+	Talk with the services like aws. 
+	Give options to the cliens.
+DSM
+	Go leng
+	Underline data structure for cluster.
+	To know wich service is  kind of database is use. 
+	create a transfer object
+Data mover
+	java
+	move data in or out of clusters
+Orchestrator 
+	Autorization and validation.
+Salt
+free api
+ 	

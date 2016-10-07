@@ -1,0 +1,34 @@
+Jekins
+	Countinous integration tool written in Java. Use for software development.
+Countinous integration
+	Practice of merging all developer working copies to a shared mainline(master).
+IntelliJ IDEA
+	Is a software application that provides comprehensive facilities to computer programmers for software development in Java.
+Jira
+	Is a computer software package that provides bug tracking, issue tracking, and project management functions. 
+Gradle
+	Is an open source build automation system.
+Build automation
+	Is the process of automating the creation of a software build and the associated processes including: compiling computer source code into binary code, packaging binary code, and running automated tests.
+API
+	Application Programming Interface
+
+
+REST API
+
+Regression testing 
+	Is a type of software testing that verifies that software previously developed and tested still performs correctly after it was changed or interfaced with other software.
+Node
+	Computer use as a server.
+Cluster
+	A computer cluster consists of a set of loosely or tightly connected computers that work together so that, in many respects, they can be viewed as a single system. 
+Proxy server
+	In computer networks, a proxy server is a server (a computer system or an application) that acts as an intermediary for requests from clients seeking resources from other servers.
+Proxy server cluster 
+	Consists of a group of proxy servers.
+Apache Spark 
+	Is an open source big data processing framework built around speed, ease of use, and sophisticated analytics. 
+Smoke testing 
+	Is preliminary testing to reveal simple failures severe enough to (for example) reject a prospective software release. A smoke tester will select and run a subset of test cases that cover the most important functionality of a component or system, to ascertain if crucial functions of the software work correctly.
+DNS
+	Domain Name System. https://youtu.be/72snZctFFtA

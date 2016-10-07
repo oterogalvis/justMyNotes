@@ -141,3 +141,5 @@ Unix Commads
 		Remove package by name.
 	&&
 		Use to execute more that one command at the same time.
+	df
+		Display free disk space. -h flag make it "Human readable"

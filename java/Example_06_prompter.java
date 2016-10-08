@@ -1,5 +1,4 @@
 import java.io.Console;
-
 // This class is made to use other componets of the game through the console.
 class Example_06_prompter {
 	private Example_06_game mGame;
@@ -14,9 +13,8 @@ class Example_06_prompter {
 		boolean isValidGuess = false;
 		while (!isValidGuess){
 			String guessAsString = console.readLine("Enter a letter: ");
-			char guess = guessAsString.charAt(0);
 			try{
-				isHit = mGame.applyGuess(guess);
+				isHit = mGame.applyGuess(guessAsString);
 				isValidGuess = true;
 			}catch (IllegalArgumentException iae){
 				console.printf("%s. Please try again.\n", iae.getMessage());
@@ -32,9 +30,15 @@ class Example_06_prompter {
 	}
 
 	public void play(){
-		while (mGame.getRemainingTries() > 0){
+		while (mGame.getRemainingTries() > 0 && !mGame.isSolve()){
 			displayProgress();
 			promptForGuess();
+		}
+		if (mGame.isSolve()){
+			System.out.printf("Congratulations you won with %d tries remaining.\n", 
+				mGame.getRemainingTries());
+		} else {
+			System.out.printf("Bummer the word was %s.\n", mGame.getAnswer());
 		}
 	}
 }

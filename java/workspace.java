@@ -4,13 +4,13 @@ public class workspace {
 	public static void main(String[] args){
 		Console console = System.console();
 		if (mypasta()){
-			System.out.println("The char at 1 is not a letter.");
+			System.out.println("It's is UpperCase");
 		} else{
-			System.out.println("The char at 1 is a letter.");
+			System.out.println("It's not upperCase");
 		}
 	}
 	public static boolean mypasta(){
-		String fieldName = "mfirst_name";
-		return !Character.isLetter(fieldName.charAt(1));
+		String fieldName = "m_first_name";
+		return Character.isLowerCase(fieldName.charAt(1));
 	}
 }

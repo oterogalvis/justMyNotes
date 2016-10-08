@@ -81,18 +81,18 @@ Example: "./example_04.java"
 		Return the index of a specific char. If char not include in string return -1.
 	charAt()
 		Return the char of a specific index.
-	toCharArray();
-		Breaks the string into an array of chars.
-	forEachloop
-		Loop over arrays.
-		for (char letter : example.toCharArray()){}
 	length()
 		Tell you how many chars are in the string.
 	%d
 		Alloy decimal replacement. Example: "The number is %d", getNumber()
 	TIP
 		Always limite your scope to the story you are working on.
-Example: "./example_05.java"
+	toCharArray();
+		Breaks the string into an array of chars.
+	forEachloop
+		Loop over arrays.
+		for (char letter : example.toCharArray()){}
+Example: "./Example_05.java"
 	isLetter(x)
 		Method that verify if the char 'x' is a letter. This method belong to the Character Wrapper.
 	toLowerCase(x)
@@ -105,3 +105,19 @@ Example: "./example_05.java"
 		Returns true if the char is uppercase. This method belong to the Character Wrapper.
 	TIP
 		While loop using booleans and exceptions. Check Example_06_prompter.java
+	Getters
+		To get a private member.
+		public String getName(){ return mName;}
+	Setters
+		You use a setter when you want to change the value of a field, after the object has been created.
+		public void setName(String newName){ mName = newName;}
+	Constructor
+		A constructor initialises an instance variable inside a class once a class is instantiated using the "new" Keyword.
+		public ClassName(String newName){ mName = newName;}
+	main(String[] args)
+		The main class should have a main method which calls another classes, the classe that are not main should have a method with the same name that the class. The main method should be define as: public static void.
+	args[0]
+		A class can use the args[0] as the variable iside its method to use the first object in the array call args that is set when the program is executed.
+	Array()
+		List of elements.
+Example: "./Example_06.java"

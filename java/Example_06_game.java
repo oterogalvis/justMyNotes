@@ -21,6 +21,13 @@ public class Example_06_game {
 		return letter;
 	}
 
+	public boolean applyGuess(String letters){
+		if (letters.length() == 0){
+			throw new IllegalArgumentException("No letter found.");
+		}
+		return applyGuess(letters.charAt(0));
+	}
+
 	public boolean applyGuess(char letter){
 		letter = validateGuess(letter);
 		boolean isHit = mAnswer.indexOf(letter) >= 0;
@@ -46,5 +53,12 @@ public class Example_06_game {
 
 	public int getRemainingTries() {
 		return MAX_MISSES - mMisses.length();
+	}
+
+	public boolean isSolve(){
+		return getCurrentProgress().indexOf('-') == -1;
+	}
+	public String getAnswer(){
+		return mAnswer;
 	}
 }

@@ -35,7 +35,7 @@ Example: "./example_01.java"
 		Gets input.
 Example: "./example_02.java"
 	.equals()
-		Equivalent of == in java.
+		Is an Object superclass method. Use to comparate objects.
 	.equalsIgnoreCase
 		Equal than wether is upcase or downcase.
 	||
@@ -121,3 +121,42 @@ Example: "./Example_05.java"
 	Array()
 		List of elements.
 Example: "./Example_06.java"
+	TIP
+		== is only for primitives (It can work with strings because the compiler create a single instance and makes all variables refer to the same instance, and keep all these variables in the "string pool", unless it's created using the constructor).
+		equals() is only for objects.
+	binary 
+		10101011 = 0 2 4 6 8 16 32 64
+		With 8 bits(== 1 byte), you can store just about any character (char) char A == 97, and char B is 98. 1024 bytes is 1KB, 1024 kilobytes is 1MB...
+	packages
+		Help us to make sure that our class names are distinguishable.
+	%n
+		Is new line in any operative system, is equal to \n in linux and \r in windows.
+	immutable
+		When an object cannot be changed, it is often referred to as, immutable.
+	date
+		Use date attributes and methods. Import java.util.Date.
+	epoch time
+		Number of milliseconds since January 1st, 1970.
+	inheritance
+		A class that is derived from another class is called a subclass (also a derived class, extended class, or child class). The class from which the subclass is derived is called a superclass (also a base class or a parent class). By doing that the child class inherit the public fields and the methods.
+	TIP
+		All the classes in Java inherit from a special type call object.
+	toString()
+		Is an Object superclass method. In general, the toString method returns a string that texturally represents this object.
+	@Override
+		An annotation is used to help the compiler, at compile time, understand that you're intending to override a method that exist in the parent class. 
+	typecasting
+		Switching of a variable between types is called type conversion or type coercion or most commonly known as typecasting.
+			Upcast. parentObject store a childObject:
+				ParentClass parentObject = childObject
+			Downcast. childObject store a parentObject:
+				ChildClass childObject = (ChildClass) parentObject
+			Create an array of objects:
+				Object[] differentObjects = [instanceOfOne, instanceOfTwo]
+			Cast elements from differentObjects array:
+				((ClassOne) differentObjects[0]); => VALID: differentObjects[0] == instanceOfOne
+				((ClassOne) differentObjects[1]); => INVALID: instanceOfTwo is not an instance of ClassOne.
+			We neet to use 'instanceof' method before performing a downcast to avoid runtime errors:
+				differentObjects[0] instanceof ClassOne => True
+	instanceof
+		Method return a boolean if the instance below to the sugested class.

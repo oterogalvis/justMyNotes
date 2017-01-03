@@ -160,3 +160,9 @@ Example: "./Example_06.java"
 				differentObjects[0] instanceof ClassOne => True
 	instanceof
 		Method return a boolean if the instance below to the sugested class.
+Example: "./Example_07.java"
+	.split()
+		Split an String into an Array.
+	Method chain
+		Methods followed by others. oneSentence.toLowerCase().contains("words");
+	

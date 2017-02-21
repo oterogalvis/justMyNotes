@@ -14,6 +14,8 @@ Example: "./example_00.java"
 		Print formatted text. Use variables and special formatting instructions.
 	%s
 		Alloy string replacement. Example: "Hello, I'm %s", firstName
+	%n
+		New line (or /n).
 	TIP
 		First declare a variable using it's data type, like String.
 		Then the set the variable un CamelCase.
@@ -62,6 +64,11 @@ Example: "./example_03.java"
 		It's assign to a method that return nothing.
 	TIP
 		To make a method that acept 0 to 1 argument you create two methods with the same name.
+		Differents kind of addition:
+			variable += 1 (The best and more recommended)
+			variable++ (return variable and sum after)
+			++variable (sum first and then return the update value)
+		jshell: Shift + tab => autocomplete all the possible methods.
 	exceptions
 		To tell the user if there is any problem using our object.
 	throw keyword
@@ -72,11 +79,12 @@ Example: "./example_03.java"
 		iea => IllegalArgumentException. Get the exception message.
 Example: "./example_04.java"
 	Separation of concerns
-		Separate the displaying portion of the code from the mage state and the behavior code.
+		Separate the displaying portion of the code from the game state and the behavior code. This allow us to use the game logic in differents types of mediums.
 	TIP
 		"" are for strings 
 		'' are for char(characters)
 		You can sum stings.
+		Member variable: Can be create with a lowercase "m" at the beginning or can be call using "this."
 	indexOf()
 		Return the index of a specific char. If char not include in string return -1.
 	charAt()
@@ -111,7 +119,7 @@ Example: "./Example_05.java"
 	Setters
 		You use a setter when you want to change the value of a field, after the object has been created.
 		public void setName(String newName){ mName = newName;}
-	Constructor
+	Constructor(initialize)
 		A constructor initialises an instance variable inside a class once a class is instantiated using the "new" Keyword.
 		public ClassName(String newName){ mName = newName;}
 	main(String[] args)
@@ -120,6 +128,14 @@ Example: "./Example_05.java"
 		A class can use the args[0] as the variable iside its method to use the first object in the array call args that is set when the program is executed.
 	Array()
 		List of elements.
+	Types of variables
+		Instance Variables (Non-Static Fields):
+			Instance variables belong to an instance of a class. Another way of saying that is instance variables belong to an object, since an object is an instance of a class. Every object has it’s own copy of the instance variables. 
+		Class Variables (Static Fields):
+			Is any field declared with the static modifier; this tells the compiler that there is exactly one copy of this variable in existence, regardless of how many times the class has been instantiated.
+		Local Variables:
+			Variable that’s declared within the body of a method. Then you can use the variable only within that method. You can not use any kind of accessor (public, protected or private).
+		Parameters:
 Example: "./Example_06.java"
 	TIP
 		== is only for primitives (It can work with strings because the compiler create a single instance and makes all variables refer to the same instance, and keep all these variables in the "string pool", unless it's created using the constructor).
@@ -129,6 +145,8 @@ Example: "./Example_06.java"
 		With 8 bits(== 1 byte), you can store just about any character (char) char A == 97, and char B is 98. 1024 bytes is 1KB, 1024 kilobytes is 1MB...
 	packages
 		Help us to make sure that our class names are distinguishable.
+	reversed internet domain name
+		Example: teamtreehouse.com => com.teamtreehouse
 	%n
 		Is new line in any operative system, is equal to \n in linux and \r in windows.
 	immutable
@@ -141,6 +159,7 @@ Example: "./Example_06.java"
 		A class that is derived from another class is called a subclass (also a derived class, extended class, or child class). The class from which the subclass is derived is called a superclass (also a base class or a parent class). By doing that the child class inherit the public fields and the methods.
 	TIP
 		All the classes in Java inherit from a special type call object.
+		\" use in order to print a quote inside a string.
 	toString()
 		Is an Object superclass method. In general, the toString method returns a string that texturally represents this object.
 	@Override
@@ -165,4 +184,13 @@ Example: "./Example_07.java"
 		Split an String into an Array.
 	Method chain
 		Methods followed by others. oneSentence.toLowerCase().contains("words");
+	TIP
+		The length of an array is set at creation time, and is inmutable. We can change the value but we can't change the length of the array.
+	compareTo()
+		Method use to compare two items. if t > o => 1. if t < o => -1. if t = o => 0.
+	Serialization
+		Is the process of translating objects into a format that can be stored and recreated later in the same or different environment.
+	import java.io.*;
+		If we are going to use a bunch of imports from the java.io package we can simply put a star here and it will import everything that we need.
 	
+Example: "./Example_08.java" & "./Example_07_package.java"

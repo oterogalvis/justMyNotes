@@ -23,6 +23,13 @@ class Example_07 {
 		System.out.println(treet2.compareTo(treet));
 		System.out.println(treet2.compareTo(treet2));
 
-		Example_07_helper.save(Example_07_helper);
+		Example_07_package[] treets = {treet, treet2};
+
+		Example_07_helper.save(treets);
+
+		Example_07_package[] reloadedTreets = Example_07_helper.load();
+		for (Example_07_package reloaded : reloadedTreets) {
+			System.out.println(reloaded);
+		}
 	}
 }

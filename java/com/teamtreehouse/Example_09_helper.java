@@ -2,28 +2,28 @@ package com.teamtreehouse;
 
 import java.io.*;
 
-public class Example_07_helper {
-	public static void save(Example_07_package[] Example_07_helper) {
+public class Example_09_helper {
+	public static void save(Example_09_package[] Example_09_helper) {
 		try (
 				// Create new file
-				FileOutputStream fos = new FileOutputStream("Example_07_helper.ser");
+				FileOutputStream fos = new FileOutputStream("Example_09_helper.ser");
 				// Pass new file into object ObjectOutputStream
 				ObjectOutputStream oos = new ObjectOutputStream(fos);
 			) {
 				// Write object method.
-				oos.writeObject(Example_07_helper);
+				oos.writeObject(Example_09_helper);
 			} catch(IOException ioe) {
-				System.out.println("Problem saving Example_07_helper");
+				System.out.println("Problem saving Example_09_helper");
 				ioe.printStackTrace();
 		}
 	}
-	public static Example_07_package[] load() {
-		Example_07_package[] treets = new Example_07_package[0];
+	public static Example_09_package[] load() {
+		Example_09_package[] treets = new Example_09_package[0];
 			try (
-				FileInputStream fis = new FileInputStream("Example_07_helper.ser");
+				FileInputStream fis = new FileInputStream("Example_09_helper.ser");
 				ObjectInputStream ois = new ObjectInputStream(fis);
 			) {
-				treets = (Example_07_package[]) ois.readObject();
+				treets = (Example_09_package[]) ois.readObject();
 			} catch(IOException ioe){
 				System.out.println("Error reading file.");
 				ioe.printStackTrace();

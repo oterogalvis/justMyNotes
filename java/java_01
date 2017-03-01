@@ -100,6 +100,17 @@ Example: "./example_04.java"
 	forEachloop
 		Loop over arrays.
 		for (char letter : example.toCharArray()){}
+	for loop
+		for (initialization; termination; increment) {}
+		for (int i = 99; i > 0; i--) {}
+	break
+		Exits the iteration.
+	continue
+		Stops executing the current iteration and start a new iteration if applicable.
+	labels
+		?? Use them sparingly, they are not common.
+	return
+		return and exit the method and iteration.
 Example: "./Example_05.java"
 	isLetter(x)
 		Method that verify if the char 'x' is a letter. This method belong to the Character Wrapper.
@@ -192,5 +203,25 @@ Example: "./Example_07.java"
 		Is the process of translating objects into a format that can be stored and recreated later in the same or different environment.
 	import java.io.*;
 		If we are going to use a bunch of imports from the java.io package we can simply put a star here and it will import everything that we need.
-	
-Example: "./Example_08.java" & "./Example_07_package.java"
+	deserialization
+		The process of opening that object again at a later time, or even giving it to someone else for them to open up.
+	serialver
+		Program use to generate a code that will be use in the java class in order to avoid class incompatibility. Class incompatibility happen when you deserialize a instance wicth class was modify. 
+		Example: serialver com.teamtreehouse.Example_07_package
+Example: "./Example_08.java" & "./Example_08.java"
+	JCF (Java Collections Framework)
+		Grouping of tools in charge of storage and retrieval of data efficiency.
+	Big O Notation
+		Is the language we use for articulating how long an algorithm takes to run. It's how we compare the efficiency of different approaches to a problem.
+	Generics
+		It would be nice if we could write a single sort method that could sort the elements in an Integer array, a String array, or an array of any type that supports ordering.
+		Java Generic methods and generic classes enable programmers to specify, with a single method declaration, a set of related methods, or with a single class declaration, a set of related types, respectively.
+		Generics also provide compile-time type safety that allows programmers to catch invalid types at compile time.
+		Example: <T>
+	Collection<T>
+		Collection of a generics(T), in the example "Collection<String>" this is a collection of Strings.
+		When we implement the Comparable interface, the compareTo() method will take and object as variable, and then we need to cast the another object we want to compare into a Object class in order to avoid incompatibility between classes. Now if we implement Comparable<DesiredClass> there is no need to cast an object into a different class becouse the compareTo() method will take a DesiredClass instance.
+	TIP
+		Never copy and paste code, always make a method compatible with similar purposes.
+	java.util.Set
+		This interface works similar than a List, Set(HashSet) does not allow duplicates. When use Tree(TreeSet) the elemens are also unique and organize in alphabetical order.

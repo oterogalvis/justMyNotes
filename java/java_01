@@ -223,5 +223,12 @@ Example: "./Example_08.java" & "./Example_08.java"
 		When we implement the Comparable interface, the compareTo() method will take and object as variable, and then we need to cast the another object we want to compare into a Object class in order to avoid incompatibility between classes. Now if we implement Comparable<DesiredClass> there is no need to cast an object into a different class becouse the compareTo() method will take a DesiredClass instance.
 	TIP
 		Never copy and paste code, always make a method compatible with similar purposes.
-	java.util.Set
+		Check examples to see how to
+	Sets (java.util.Set)
 		This interface works similar than a List, Set(HashSet) does not allow duplicates. When use Tree(TreeSet) the elemens are also unique and organize in alphabetical order.
+	Maps (java.util.Map)
+		Map provides a key value representation of data. Maps can be used for all sorts of applications, from counting to indexing.
+	Iterate through a HashMap
+	    for (String key : map.keySet()) { // ... }
+	    for (Object value : map.values()) { // ... }
+Example: "./Example_09.java"

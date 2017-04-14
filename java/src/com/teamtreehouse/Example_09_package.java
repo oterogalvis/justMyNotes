@@ -50,7 +50,7 @@ public class Example_09_package implements Comparable<Example_09_package>, Seria
 		}
 		int dateCmp = mCreationDate.compareTo(other.mCreationDate);
 		if (dateCmp == 0) {
-			return mCreationDate.compareTo(other.mCreationDate);
+			return description.compareTo(other.description);
 		}
 		return dateCmp;
 	}

@@ -167,7 +167,8 @@ Example: "./Example_06.java"
 	epoch time
 		Number of milliseconds since January 1st, 1970.
 	inheritance
-		A class that is derived from another class is called a subclass (also a derived class, extended class, or child class). The class from which the subclass is derived is called a superclass (also a base class or a parent class). By doing that the child class inherit the public fields and the methods.
+		A class that is derived from another class is called a subclass (also a derived class, extended class, or child class). The class from which the subclass is derived is called a superclass (also a base class or a parent class).
+		By doing that the child class inherit the public fields and the methods.
 	TIP
 		All the classes in Java inherit from a special type call object.
 		\" use in order to print a quote inside a string.
@@ -205,6 +206,7 @@ Example: "./Example_07.java"
 		If we are going to use a bunch of imports from the java.io package we can simply put a star here and it will import everything that we need.
 	deserialization
 		The process of opening that object again at a later time, or even giving it to someone else for them to open up.
+		Pending: https://teamtreehouse.com/library/java-data-structures/organizing-data/serialization
 	serialver
 		Program use to generate a code that will be use in the java class in order to avoid class incompatibility. Class incompatibility happen when you deserialize a instance wicth class was modify. 
 		Example: serialver com.teamtreehouse.Example_07_package
@@ -220,10 +222,12 @@ Example: "./Example_08.java" & "./Example_08.java"
 		Example: <T>
 	Collection<T>
 		Collection of a generics(T), in the example "Collection<String>" this is a collection of Strings.
-		When we implement the Comparable interface, the compareTo() method will take and object as variable, and then we need to cast the another object we want to compare into a Object class in order to avoid incompatibility between classes. Now if we implement Comparable<DesiredClass> there is no need to cast an object into a different class becouse the compareTo() method will take a DesiredClass instance.
+		When we implement the Comparable interface, the compareTo() method will take and object as variable, and then we need to cast the another object we want to compare into a Object class in order to avoid incompatibility between classes.
+		Now if we implement Comparable<DesiredClass> there is no need to cast an object into a different class becouse the compareTo() method will take a DesiredClass instance.
+	Comparable<T>
+		Comparable helps you to sort a List of 'x' class. In order for .sort() to work you need to @Overrite the compareTo() method and specify how do you want a list of 'x' to be sort.
 	TIP
 		Never copy and paste code, always make a method compatible with similar purposes.
-		Check examples to see how to
 	Sets (java.util.Set)
 		This interface works similar than a List, Set(HashSet) does not allow duplicates. When use Tree(TreeSet) the elemens are also unique and organize in alphabetical order.
 	Maps (java.util.Map)
@@ -231,4 +235,23 @@ Example: "./Example_08.java" & "./Example_08.java"
 	Iterate through a HashMap
 	    for (String key : map.keySet()) { // ... }
 	    for (Object value : map.values()) { // ... }
+	    for (Map.Entry<String, Object> entry : map.entrySet()) { // ... }
 Example: "./Example_09.java"
+    throws Exception
+        If the content of the method throws an Exception you can declared before the block. Example: private String promptAction() throws IOException {}
+    trim()
+        Take out the spaces at the beginning and end.
+    Stack trace
+        In simple terms, a stack trace is a list of the method calls that the application was in the middle of when an Exception was thrown.
+    Switch
+        Allows you to use case scenarios. Always break the case otherwise you will fall in the next case. Use default if any of the cases are meet.
+    Queue
+        Queues are used when you want to store elements prior to processing. They provide convenient methods for grabbing the next element and removing it from the list (poling).
+        Example: Queue<Song> songQueue = new ArrayDeque<Song>();
+    poll() - Queue method
+        So what that will do is it's gonna take the next one that's available if there is one, else return null.
+    TIP
+        Good example of Serialization in this example_10 ~ SongBook
+        You can see how to define a class inside a method in the example_10 ~ SongBook
+    protected
+        Is private for other clases and public for the clases in the same package.

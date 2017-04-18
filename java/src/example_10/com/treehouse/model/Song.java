@@ -27,6 +27,27 @@ public class Song {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Song song = (Song) o;
+
+        if (artist != null ? !artist.equals(song.artist) : song.artist != null) return false;
+        if (title != null ? !title.equals(song.title) : song.title != null) return false;
+        return videoUrl != null ? videoUrl.equals(song.videoUrl) : song.videoUrl == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = artist != null ? artist.hashCode() : 0;
+        result = 31 * result + (title != null ? title.hashCode() : 0);
+        result = 31 * result + (videoUrl != null ? videoUrl.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return String.format("%s by %s", title, artist);
     }

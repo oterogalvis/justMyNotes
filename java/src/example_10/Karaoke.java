@@ -1,6 +1,6 @@
 package example_10;
 
-import example_10.com.treehouse.KareokeMachine;
+import example_10.com.treehouse.KaraokeMachine;
 import example_10.com.treehouse.model.SongBook;
 
 /**
@@ -11,7 +11,7 @@ public class Karaoke {
         String songsFileLocation = "src/example_10/";
         SongBook songBook = new SongBook();
         songBook.importFrom(songsFileLocation + "songs.txt");
-        KareokeMachine machine = new KareokeMachine(songBook);
+        KaraokeMachine machine = new KaraokeMachine(songBook);
         machine.run();
         System.out.println("Saving book...");
         songBook.exportTo(songsFileLocation + "songs.txt");

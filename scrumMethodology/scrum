@@ -1,0 +1,66 @@
+Scrum
+	The Waterfall Model
+		A time-honored tradition in software development is to use a consistent sequence of stages to design, build, and test software. This sequential model is often called, “waterfall” because, like water flowing downstream, it is characterized by a process of irreversible flow from stage to stage from start to finish.
+		Design -> Build -> Test.
+	Problems with Waterfall
+		Time and resources wasted in handoff
+		Product does not fit the intent
+		Difficult to respond to change
+	The Agile Manifesto
+		In 2001, a group of 17 software developers, interested in developing software using less resources and less time, gathered to discuss taking a new philosophical stance on software development. The Agile Manifesto encourages teams to think about how to break down the silos that separate people working on a project, giving people formal roles and responsibilities and providing expectations for collaboration.
+		Agile values:
+			- Individuals and interactions over processes and tools
+			- Working software over comprehensive documentation
+			- Customer collaboration over contract negotiation
+			- Responding to change over following a plan
+	Why is so important for a developer to know scrum:
+		First, many teams are adopting agile practices and understanding agile development will likely be important in working with others and improve your eligibility as a candidate for many job openings. 
+		Second, you'll find that few professional software engineers work entirely on their own. Even if you work with a team that doesn't formally adopt agile practices, it helps to understand some of the ways people work together to build software. 
+		Finally, even in a team of one, understanding agile practices can help you to do things like prioritize your work or recognize when you need to get out of your own world and hear the voice of the customer to guide your work.
+	Scrum
+		The Scrum methodology is an agile model consisting of a well-defined framework for carrying out software development in teams.
+	Stakeholder
+		Is someone outside the Scrum team who has a say in what the product should be, such as a manager, client, or customer
+	Scrum roles
+		Product Owner
+			Is the “voice of the customer” and is responsible for developing, maintaining, and prioritizing the items in the product backlog.
+		Scrum Master
+			Is responsible for making sure the work of the team goes smoothly by facilitating Scrum and removing impediments.
+		Development Team Members 
+			Are the members of the team who write and test code.
+	The Sprint
+		Is the basic unit of work for a Scrum team, and it may be the feature of Scrum that most differentiates it from other Agile models. A sprint is a single iteration carried out by a team.
+	Sprint Product
+		The outcome of a sprint is “potentially shippable product,” or working software that has the potential to be shipped to the customer.
+	Time Box
+		Once begun, the team is committed to spending exactly the allotted time on the sprint.
+	Cadence
+		When team has a consistent sprint length, they develop a rhythm or cadence to their work.
+	Scrum events
+		Scrum event
+			Scrum team meeting that recurs during each Sprint
+		Sprint Planning
+			Scrum event where the team gathers to plan a new sprint
+		Daily Stand-up Meetings
+			Daily check-ins where each team member reports progress, next tasks, and issues impeding progress
+		Backlog Refinement
+			Product owner reviews product backlog items with the team for clarification and revision. The team estimates the effort of each item.
+		Sprint Review
+			Team gathers with stakeholders to demonstrate working software in the form of the Sprint Product
+		Retrospective
+			Team gathers to reflect on the work of the Sprint and identify something they can attempt to improve in the next sprint
+	User Story
+		A a special kind of product backlog item constructed to describe the value to the user. User stories define who the user is, what they need, and why they need it. The value of the user story is defined by who the user is, what they need, and why they need it.
+	The product backlog
+		Is a priority list of user requirements, use cases to be done in order to create, maintain and sustain a product. Product Owner owns the product backlog,(s)he is the one who prioritize it based on the customers feedback or business value.
+	Sprint backlog
+		Is the subset of the product backlog. Each sprint, scrum team picks the user stories from product backlog on top of its stack, the number of user story picked by scrum team for a time box sprint is based on the average velocity of a scrum team. 
+	The Taskboard
+		ToDo | InProgress | Done
+	Definition of "Done"
+		Effective agile teams have clear standing agreements regarding how they will work together. Part of this is the artifact known as the definition of “done.”
+		- Tasks are complete
+		- Code is reviewed
+		- Item is tested
+		- Reviewed with stakeholders
+		- Product Owner reviews Conditions of Acceptance

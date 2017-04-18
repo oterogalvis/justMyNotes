@@ -2,6 +2,7 @@ package example_10.com.treehouse;
 
 import example_10.com.treehouse.model.Song;
 import example_10.com.treehouse.model.SongBook;
+import example_10.com.treehouse.model.SongRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,16 +12,16 @@ import java.util.*;
 /**
  * Created by jorgeotero on 4/3/17.
  */
-public class KareokeMachine {
+public class KaraokeMachine {
     private SongBook songBook;
     private BufferedReader bufferedReader;
-    private Queue<Song> songQueue;
+    private Queue<SongRequest> songRequestQueue;
     private Map<String, String> menu;
 
-    public KareokeMachine(SongBook songBook) {
+    public KaraokeMachine(SongBook songBook) {
         this.songBook = songBook;
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        songQueue = new ArrayDeque<Song>();
+        songRequestQueue = new ArrayDeque<>();
         menu = new HashMap<String, String>();
         menu.put("add", "Add a new song to the song book.");
         menu.put("choose", "Choose a song to sing!");
@@ -29,7 +30,7 @@ public class KareokeMachine {
     }
 
     private String promptAction() throws IOException {
-        System.out.printf("There are %s songs available and %d in the queue. Your options are: %n", songBook.getSongCount(), songQueue.size());
+        System.out.printf("There are %s songs available and %d in the queue. Your options are: %n", songBook.getSongCount(), songRequestQueue.size());
         for (Map.Entry<String, String> option : menu.entrySet()) {
             System.out.printf("%s - %s%n", option.getKey(), option.getValue());
         }
@@ -50,9 +51,15 @@ public class KareokeMachine {
                         System.out.printf("%s added! %n%n", song);
                         break;
                     case "choose":
+                        String singerName = promptForSingerName();
                         String artist = promptArtist();
                         Song artistSong = promptSongForArtist(artist);
-                        songQueue.add(artistSong);
+                        SongRequest songRequest = new SongRequest(singerName, artistSong);
+                        if (songRequestQueue.contains(songRequest)) {
+                            System.out.printf("\n\nThe %s already requested %s!\n", singerName, artistSong);
+                            break;
+                        }
+                        songRequestQueue.add(songRequest);
                         System.out.printf("You chose: %s%n", artistSong);
                         break;
                     case "play":
@@ -69,6 +76,11 @@ public class KareokeMachine {
                 ioe.printStackTrace();
             }
         }
+    }
+
+    private String promptForSingerName() throws IOException {
+        System.out.print("Enter the singer's name: ");
+        return bufferedReader.readLine();
     }
 
     private Song promptNewSong() throws IOException {
@@ -112,11 +124,16 @@ public class KareokeMachine {
     }
 
     public void playNext() {
-        Song song = songQueue.poll();
-        if (song == null) {
+        SongRequest songRequest = songRequestQueue.poll();
+        if (songRequest == null) {
             System.out.println("Sorry there is no songs in the queue. Use choose from the menu to add some.");
         } else {
-            System.out.printf("%n%n%n Open %s to hear the %s by %s %n%n%n", song.getVideoUrl(), song.getTitle(), song.getArtist());
+            Song song = songRequest.getSong();
+            System.out.printf("%n%n%n Open %s to hear the %s by %s %n%n%n",
+                    songRequest.getSingerName(),
+                    song.getVideoUrl(),
+                    song.getTitle(),
+                    song.getArtist());
         }
     }
 }

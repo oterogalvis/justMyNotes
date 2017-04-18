@@ -255,3 +255,34 @@ Example: "./Example_09.java"
         You can see how to define a class inside a method in the example_10 ~ SongBook
     protected
         Is private for other clases and public for the clases in the same package.
+Example: Example_10.java
+    Regular expressions
+    	Use "visual regex tester" for better visualitation.
+    	Metacharacters
+    		Can substitute any character. 
+    		Period "." is a methacharacter. Example = full-stack == full.stack
+    		Asterisk "*" Zero or more maching. Example = [A-Za-z] != [A-Za-z]*
+    	Character Class
+    		Defined by squared brackets "[]" you can put any caracter that you allow inside. 
+    	Rangers
+    		Hyphen "-", if it's type a-z it will match all the characters from a to z.
+    	Shortcuts
+    		\w* is a shortcut for word. Also \W
+    		\w is a shortcut for letter.
+    		\s is a shortcut for space.
+    		\s* is a shortcut for group of spaces. 
+    		^ negation (only as first char in the character class). Example: [^\w]* = grap anything that is not a word.
+    		&& and
+    		/d all digits. Also [0-9]
+    		^ match the beginning of the line. Example: ^\d{5}
+    		$ match the beginning of the line. Example: \d{5}$
+    		(?i) ignore case. It's use at the beginning.
+    	Cuantifyer: 
+    		Curly braces "{}", Allow you to decide how many char match. Example = \d{5}
+    	Optional:
+    		"()?" everything inside the parentesis is optional.
+    	Logical operator
+    		| or.
+    	Capturing group
+    		"()"
+    	https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html

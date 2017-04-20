@@ -17,3 +17,96 @@ Java
 		Is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
 	Inheritance and Composition
 		Inheritance is an "is-a" relationship. Composition is a "has-a". You do composition by having an instance of another class 'C' as a field of your class, instead of extending 'C'.
+		Example: Car has a Engine and Car is a Automobile
+			class Engine {} // The engine class.
+			class Automobile{} // Automobile class which is parent to Car class.
+			// Car is an Automobile, so Car class extends Automobile class.
+			class Car extends Automobile{ 
+			 // Car has a Engine so, Car class has an instance of Engine class as its member.
+			 private Engine engine; 
+			}
+	Single Responsibility Principle
+		Every class should have responsibility over a single par ot functionality provided by the software.
+		A class should only have one reason to change.
+	Test-Driven Development (TDD)
+		As the name implies, it places emphasis on the need to test every unit of code (even before the code is written) before full development can begin. You start by testing for a functionality (which fails), then you write just enough code to ensure the test passes. You then test the code and make corrections where necessary until the test is passed. Once the test is passed, you refactor the code (clean it up by removing redundancies, etc) and move on to the next piece of code.
+	@Test
+	Test Case
+		This is how each individual test it's call. In JUnit this is implemented as methods annotated with the @Test annotation. The methods return void and are grouped togather unde a parent class.
+	@TestPlan
+	Test Fixture
+		Is the sourrounding class around the test cases. It's responsible for setting things up that are needed for each test.
+	Test Runner
+		Finds and runs all the test ceses that tou specify. When it completes, it provides you with the results of how many tests passed and how many test failed.
+	AAA
+		Arrange -> Act -> Assert
+	The happy path
+		You should be able to determine what that path is by asking yourself this question. If this code ran correctly, how would I know?
+	abstract
+		This keyword mean that the class can't be instantiated.
+	abstract method
+		This is an empty method the that is declared in a abstract class but needs to be overrite in the class that implement it.
+	extends vs implements 
+		Extends is for when you're inheriting from a base class (i.e. extending its functionality).
+		Implements is for when you're implementing an interface.
+	interface vs abstract class
+		An abstract class can have shared state or functionality. An interface is only a promise to provide the state or functionality. A good abstract class will reduce the amount of code that has to be rewritten because it's functionality or state can be shared. The interface has no defined information to be shared.
+		Differences:
+			- Abstract class can extend only one class or one abstract class at a time. Interface can extend any number of interfaces at a time.
+			- Abstract  class  can extend from a class or from an abstract class. Interface can extend only from an interface.
+			- Abstract  class  can  have  both  abstract and concrete methods. Interface can  have only abstract methods.
+			- Class can extend only one abstract class. A class can implement any number of interfaces.
+			- In abstract class keyword ‘abstract’ is mandatory to declare a method as an abstract. In an interface keyword ‘abstract’ is optional to declare a method as an abstract.
+			- Abstract  class can have  protected , public and public abstract methods. Interface can have only public abstract methods i.e. by default.
+			- Abstract class can have  static, final  or static final  variable with any access specifier	 interface  can  have only static final (constant) variable i.e. by default.
+	Inner class
+		Inner classes are helpful sometimes to create classes that depend on certain variables in a surrounding class, or parent class. This type of classes are ussualy protected. Example: Map.Entry 
+	Test rule "FIRST"
+		Fast - Isolated - Repeatable - Self-verifying - Timely.
+	Test rule "CORRECT"
+		Conform - Ordering - Range - Reference - Existence - Cardinality - Time.
+			C - What happens when the unit receives data that doesn’t Conform to the expected format?
+			O - Is the Ordering of values returned in the expected order. Applications where listing results in a certain sort order is important, should definitely have tests proving that this works as intended.
+			R - Make sure that you check the Range. What happens if you go below the minimum or over the maximum value allowed?
+			R - Does this unit Reference any other code from another unit? Is that other code unit tested?
+			E - Remember that Existence is important in most units. Are things allowed to be null? What happens if they are?
+			C - You should check the different possible number of elements in a grouping, or Cardinality. Related to existence, always check what happens when there are 0. What happens with a single value, what happens with multiple values. This is often called 0-1-n, because none, one and some usually produce different expectations.
+			T - Remember to always take Time into account. This can be relative as well as absolute. Like for instance, sometimes applications require things to happen in a certain order. What happens if it doesn’t?
+	fail()
+		JUnit method to force a test to fail.
+	assertEquals()
+		This method throws an error if the variables are not equals. Example: assertEquals(message, expected, actual)
+	assertNull()
+		This method throws an error if the variables are not null. Example: assertEquals(message, variable)
+	@Before
+		The before annotation ia use for the setUp method (setUp name is optional), this way we can set the necessary requirements for each test without repeat a the same code.
+	@After
+		The method under this annotation will run after each of the test method completes. (TearDown method)
+	@Rule
+	ExpectedException
+		Allow you to redefube behavior in each test method. With this annotation we can specify the kind of exception we are expecting base on the message.
+	Test doubles
+		Fake
+			Have working inplementations. Use shortcuts. In memory databases are a great example.
+		Stubs
+			Respond with a canned answer. Avoid having to do heavy calculations. Can ve used to avoid network connectivity.
+		Third party libraries
+		Spies
+			Fancier stubs. Can be used to verify things happened in a certain order.
+		Mocks
+			From a specification od expected calls. Throws exceptions when used incorrectly. 
+	Constructor dependency injection
+		Allows you to easily switch out implementations as needed, and it's super-handy for test doubles.
+	Continuous integration CI
+		A development practice where developers check-in code and have automated tests and automatic builds that help detect problems early.
+		Continuous Integration requires developers to merge code into a shared repository several times a day. And what that does is it helps detect build problems and it helps developers find errors easily by exposing them. Now if you commit infrequently it makes error handling much more troublesome. If you wait until you get ready to launch the product to see how integration is working, it's bound to cause a delay.
+	Popular CI Solutions
+		Travis CI
+		CircleCI
+		Bamboo
+		Codeship
+		Jenkins
+	TIP:
+		If you import static [reverseDNS] you can call the methods without call the class. Example: fail() instead Assert.fail().
+		Add to the README file a build status (Status Image: Markdown) so anybody can see that the code is working safely.
+Example: Example_11.java

@@ -9,7 +9,7 @@ Java
 		To close everyline.
 	CamelCase
 		The first letter is lowercase and the second capitalize. Example: firstName
-Example: "./example_00.java"
+Example: example00To02.example_00.java
 	printf
 		Print formatted text. Use variables and special formatting instructions.
 	%s
@@ -20,7 +20,7 @@ Example: "./example_00.java"
 		First declare a variable using it's data type, like String.
 		Then the set the variable un CamelCase.
 		Last asing the value.
-Example: "./example_01.java"
+Example: example00To02.example_01.java
 	runtime errors
 		Errors that only can be found when the program is running.
 	int
@@ -35,7 +35,7 @@ Example: "./example_01.java"
 		Provide methods that can use to manipulate and produce primitive data.
 	.readLine()
 		Gets input.
-Example: "./example_02.java"
+Example: example00To02.example_02.java
 	.equals()
 		Is an Object superclass method. Use to comparate objects.
 	.equalsIgnoreCase
@@ -53,7 +53,7 @@ Example: "./example_02.java"
 		Change to lowercase.
 	.println()
 		Print a line with a \n at the end. Likes puts in ruby.
-Example: "./example_03.java"
+Example: example03.java
 	TIP
 		Constans in uppercase.
 	final keyword
@@ -77,7 +77,7 @@ Example: "./example_03.java"
 		To catch a exception.
 	iae.getMessage()
 		iea => IllegalArgumentException. Get the exception message.
-Example: "./example_04.java"
+Example: example04.java
 	Separation of concerns
 		Separate the displaying portion of the code from the game state and the behavior code. This allow us to use the game logic in differents types of mediums.
 	TIP
@@ -111,7 +111,7 @@ Example: "./example_04.java"
 		?? Use them sparingly, they are not common.
 	return
 		return and exit the method and iteration.
-Example: "./Example_05.java"
+Example: Example_05.java
 	isLetter(x)
 		Method that verify if the char 'x' is a letter. This method belong to the Character Wrapper.
 	toLowerCase(x)
@@ -123,7 +123,7 @@ Example: "./Example_05.java"
 	isUpperCase(x)
 		Returns true if the char is uppercase. This method belong to the Character Wrapper.
 	TIP
-		While loop using booleans and exceptions. Check Example_06_prompter.java
+		While loop using booleans and exceptions. Check example06.Prompter.java
 	Getters
 		To get a private member.
 		public String getName(){ return mName;}
@@ -147,7 +147,7 @@ Example: "./Example_05.java"
 		Local Variables:
 			Variable that’s declared within the body of a method. Then you can use the variable only within that method. You can not use any kind of accessor (public, protected or private).
 		Parameters:
-Example: "./Example_06.java"
+Example: Example_06.java
 	TIP
 		== is only for primitives (It can work with strings because the compiler create a single instance and makes all variables refer to the same instance, and keep all these variables in the "string pool", unless it's created using the constructor).
 		equals() is only for objects.
@@ -191,7 +191,7 @@ Example: "./Example_06.java"
 				differentObjects[0] instanceof ClassOne => True
 	instanceof
 		Method return a boolean if the instance below to the sugested class.
-Example: "./Example_07.java"
+Example: Example_07.java
 	.split()
 		Split an String into an Array.
 	Method chain
@@ -209,8 +209,8 @@ Example: "./Example_07.java"
 		Pending: https://teamtreehouse.com/library/java-data-structures/organizing-data/serialization
 	serialver
 		Program use to generate a code that will be use in the java class in order to avoid class incompatibility. Class incompatibility happen when you deserialize a instance wicth class was modify. 
-		Example: serialver com.teamtreehouse.Example_07_package
-Example: "./Example_08.java" & "./Example_08.java"
+		Example: serialver example07.com.teamtreehouse.Treet
+Example: Example_08.java
 	JCF (Java Collections Framework)
 		Grouping of tools in charge of storage and retrieval of data efficiency.
 	Big O Notation
@@ -236,7 +236,7 @@ Example: "./Example_08.java" & "./Example_08.java"
 	    for (String key : map.keySet()) { // ... }
 	    for (Object value : map.values()) { // ... }
 	    for (Map.Entry<String, Object> entry : map.entrySet()) { // ... }
-Example: "./Example_09.java"
+Example: example09.java
     throws Exception
         If the content of the method throws an Exception you can declared before the block. Example: private String promptAction() throws IOException {}
     trim()
@@ -251,8 +251,8 @@ Example: "./Example_09.java"
     poll() - Queue method
         So what that will do is it's gonna take the next one that's available if there is one, else return null.
     TIP
-        Good example of Serialization in this example_10 ~ SongBook
-        You can see how to define a class inside a method in the example_10 ~ SongBook
+        Good example of Serialization in this example10 ~ SongBook
+        You can see how to define a class inside a method in the example10 ~ SongBook
     protected
         Is private for other clases and public for the clases in the same package.
 Example: Example_10.java

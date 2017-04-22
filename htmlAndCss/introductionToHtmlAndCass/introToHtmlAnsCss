@@ -1,0 +1,10 @@
+example of simple and nice animation in css:
+	header .profile-image:hover {
+		transform: scale(1.2) rotate(5deg)
+	}
+Selfclosing tags or empty elements
+	Tags that don't need to be close
+Target Attribute
+	To make a link open in a new tab add the attribute target=_blank
+href=#top
+	Set the anchor tag so that it points to the top of the page.

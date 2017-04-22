@@ -109,4 +109,31 @@ Java
 	TIP:
 		If you import static [reverseDNS] you can call the methods without call the class. Example: fail() instead Assert.fail().
 		Add to the README file a build status (Status Image: Markdown) so anybody can see that the code is working safely.
+		Double-sided relationship:
+			protected Answer(Question question, User author, String text) {
+		        super(author, text);
+		        this.question = question;
+		        question.addAnswer(this); // Double-sided relationship
+			}
 Example: Example_11.java
+	Dependency
+		Whenever a class A uses another class or interface B, then A depends on B. A cannot carry out it's work without B, and A cannot be reused without also reusing B. In such a situation the class A is called the "dependant" and the class or interface B is called the "dependency". A dependant depends on its dependencies.
+	Transitive dependency
+		When a dependency that you are using requires another library, the required library is known as a transitive dependency. Essentially, what this means to you is that you also rely on that other dependency.
+	Gradle
+		Is an amazingly flexible build tool, and it's jam packed with all sorts of features. Build tools are used to automate the process of packaging up and shipping your code to your users.
+	TIP
+		To add a new dependency you can browse through http://commons.apache.org/ and take the info of the dependency to add it in build.gradle
+		When search in maven for a repository google can offer better results than maven website. Example: Search in google -> maven html parser
+	Maven central
+		Place were the required repositories are downloaded throught gradle. It can be modify or substituted in build.gradle
+	./gradlew
+		Console command to get gradlew install in the computer.
+	./gradlew dependencies
+		Show list of dependencies for the different configurations.
+	Semantic versioning (sim ver)
+		v2.5.1
+			v2 - Major version: Use when you make API changes that are not compatible with prior releases.
+			5 - Minor version: Use when you add funcionality in a backwards compatible manner.
+			1 - The patch: When you add bug fixes.
+		Sometimes the word SNAPSHOT is added to the end to signify the latest development version, prior to a release. It's for code that's under development, but not yet released.

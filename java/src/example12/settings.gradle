@@ -1,0 +1,4 @@
+package example12
+
+rootProject.name = 'review'
+

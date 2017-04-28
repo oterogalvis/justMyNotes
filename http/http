@@ -1,0 +1,106 @@
+HTTP
+	http
+		Lenguage use to communicate over the internet. Set of rules that governs the messaging between devices over the internet.
+	Example of client:
+		Chrome, Safari, facebook app, weather app.
+	Example of server:
+		Apache, Nginx, Node.js, Tomcat.
+	Port 80
+		In a IP there is several languages, like HTTP, SMTP, FTP. The request will go to port 80 by default, becouse as long as there is a webserver in the port 80, that server will speak HTTP.
+	IP
+		Internet protocol. The host or domain reside in a IP (It can be many domains/hosts in a single IP), which is the address of a specific device or server. 
+	Telnet
+		Piece of software design to conneting and communicating with a remote device.
+	httpbin.org
+		Service for testing http requests and seeing the resulting responses.
+	GET
+		View a resourse on the server without make any changes.
+	/
+		The root.
+	Example HTTP
+		telnet httpbin.org 80
+		GET / HTTP/1.1 => request line, Get the content from the root using the http version 1.1.
+		Host: httpbin.org => Expecify the host again. There might be several host per address.
+	Example XML
+		telnet httpbin.org 80
+		GET /xml HTTP/1.1 => request line, Get the content from the root using the http version 1.1.
+		Host: httpbin.org => Expecify the host again. There might be several host per address.
+	XML
+		Extensible Markup Lenguage
+	POST
+		Make a change or update to the listed resourse.
+	URI
+		Uniform Resourse Identifyer
+		Example: /xml
+	URL 
+		Uniform Resourse Locator. [protocol] [hostName] [uri]
+		Example: http://httpbin.org/xml
+	TIP
+		HTTP follow by a / and ending the with the version.
+		Header -> Blank line -> Body
+	How a HTTP request looks like
+		[Reques method]	[URL]	HTTP/[version]
+		GET /xml HTTP/1.1
+	Header
+		Communicates information related to de request being made, and can include all sorts of info (Like host, user-agent and language).
+	Body also call payload
+		Data been transfered in the request, if any (Optional, only for POST request, not GET).
+	Example of complete request
+		DESCRIPTION				|	FORMAT									|	EXAMPLE
+		Request-Line			|	[Reques method] [URL] HTTP/[version]	|	GET /xml HTTP/1.1
+		Headers					|	[Header Name]: [Header Value]			|	Host: httpbin.org
+								|											|	User-Agent: telnet
+								|											|	Accept-Language: en-US
+								|											|	Content-Length: 32(POST only)
+		Blank Line 				|	[Empty line]							|
+		Request Body/Payload	|	[Post Info(only for POST request)]		|	firstname=Chris&language=English
+	HTTP request methods
+		HEAD: Same as GET but returns only HTTP headers and no document body
+		PUT: Uploads a representation of the specified URI
+		DELETE: Deletes the specified resource
+		OPTIONS: Returns the HTTP methods that the server supports
+		CONNECT: Converts the request connection to a transparent TCP/IP tunnel
+	Example of complete response
+		DESCRIPTION				|	FORMAT									|		EXAMPLE
+		Status-Line				|	HTTP/[version] [Status code] [Status message]	HTTP/1.1 200 OK
+		Headers					|	[Header Name]: [Header Value]			|		Server: nginx
+								|											|		Date: Thu, 05 Nov 2015 19:57:23 GMT
+								|											|		Content-Type: application/xml
+		Blank Line 				|	[Empty line]							|
+		Response Body/Payload	|	[Response Info]							|	<slideshow
+								|											|		title="Sample slide"
+								|											|		date="Date of publication"
+								|											|		author="Yours Truly"
+								|											|		>
+								|											|	...
+								|											|	</slideshow>
+	HTTP responses (Estatus code & Estatus message)
+		200 OK
+		301 Page moved
+		401 Unauthorized
+		404 Not found
+		407 Proxy Authentication Required
+		500 Server error
+	HTTP responses categories
+		Informational 1xx
+		Successful 2xx
+		Redirection 3xx
+		Client Error 4xx
+		Server Error 5xx
+	Stateless protocol
+		No record of previous interactions, and each interaction is processed only with the indormation that comes with that particular ineraction. HTTP is an exaple of stateless protocol.
+	Query string
+		A query string is simply a sequence of name value pairs where the names and values are separated by an equal sign here and here and the pairs are separated by ampersands(&). So we have one ampersand between the two name value pairs. When using a query string and a uri, you start with a single question mark. When I make this request, I can see that the server was able to read the data I passed, and use it to put together a response.
+		Example of using the queri string in the URI:
+			GET /get?firstname=Chris&language=English HTTP/1.1
+			google.com/maps?q=boston
+	chrome dev tools
+		option+command+i
+		tab 'Console'
+			You cant type whatever JavaScript command you like.
+		tab 'Elements'
+			You will see the entire HTML structure and the css and javaScript attach to the elements. You can make changes and see how the page would look like.
+		tab 'Network'
+			You will see all the requests and responses.
+	TIP
+		In a post request content type and content length headers are required. And the query string data is included in the pay low below the headers instead of in the request line above the headers.

@@ -7,4 +7,6 @@ Selfclosing tags or empty elements
 Target Attribute
 	To make a link open in a new tab add the attribute target=_blank
 href=#top
-	Set the anchor tag so that it points to the top of the page.
+	Set the tag so it points to the top of the page.
+css-tricks.com
+	Under Almanac you can find a nice long list of css selectors and properties.

@@ -115,7 +115,7 @@ Java
 		        this.question = question;
 		        question.addAnswer(this); // Double-sided relationship
 			}
-Example: Example_11.java
+Example: Example12.java
 	Dependency
 		Whenever a class A uses another class or interface B, then A depends on B. A cannot carry out it's work without B, and A cannot be reused without also reusing B. In such a situation the class A is called the "dependant" and the class or interface B is called the "dependency". A dependant depends on its dependencies.
 	Transitive dependency
@@ -137,3 +137,73 @@ Example: Example_11.java
 			5 - Minor version: Use when you add funcionality in a backwards compatible manner.
 			1 - The patch: When you add bug fixes.
 		Sometimes the word SNAPSHOT is added to the end to signify the latest development version, prior to a release. It's for code that's under development, but not yet released.
+	Functional programming
+		In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.
+	SAM
+		Single abstract method.
+	Lamba
+		Unname anonymous function.
+Example: Example13.java
+	Web Server
+		Frameworks either embed or integrate with a specific web server. This is what handles the actual communication over HTTP. It makes sure it can handle many requests at once and serve multiple clients.
+	Routing
+		An HTTP request specifies the resource it wants through headers. A framework allows developers to define what code gets run based on the resource requested. They usually allow you to partially match the URI to keep things dynamic.
+	Request and Response objects
+		Frameworks usually give you a very rich request and response object that are representations of the HTTP requests and responses. These objects make it very easy for you to check if a header exists or handle normal HTTP status codes.
+	Templating
+		Most pages have a surrounding style and only little bits of dynamic data. Instead of writing all those bits in a string, the idea of templating is used. Most frameworks allow you to snap in different templating languages to build pages and push in just the dynamic bits into the surrounding HTML.
+	Data Access Object (DAO)
+		This is a desing pattern that's used to abstract a wayy how you retrieve and store data.
+	Template reuse or template inheritance.
+		It means the ability to embed part of a template into another one.
+	Handlebars
+		Create html structure 
+			html:5 + tab
+		We have a base html format and we only neet to change a specific block, we use:
+			{{#block "placeholder"}}{{/block}}
+			{{#partial "placeholder"}}{{/partial}}
+			{{> base.hbs}}
+		Create css link
+			link:css + tab
+	Spark
+		get()
+			HTTP method in spatk, it takes a path to match the HTML forms.
+		post()
+			HTTP method in spatk, it takes a path to match the HTML forms.
+		staticFileLocation("/public")
+			Anything that can't be found will look into this public directory first. Static files are files that don't change or don't need any dynamic implementation.
+		before()
+			Spark filter (HTTP middleware), it's executed even before the request is proccess, it takes a path to match the HTML forms.
+		halt()
+			Stop the request form hitting any of the other routes. Commonly use inside the before block.
+		findFirst()
+			Method use after a stream().filter(). It allow you to get the first item that match the filter. After use this method you have to give an option in case of any of the items match the filter, using the methods orElse*().
+			Example: ideas.stream().filter(courseIdea -> courseIdea.getTitle().equals(slug)).findFirst().orElseThrow(NotFoundException::new);
+		queryParam()
+			Get a value submitted on the URL or through the form.
+			Example: /smartapp/getDataViewModelConfig?collId=123
+				String id = request.queryParams("collId");
+		param()
+			Get a parameter off of the request taking whatever was in the URL.
+			Example: post("/ideas/:slug/vote", ...;
+				dao.findBySlug(request.params("slug"));
+		cookie()
+			Allows you to access a cookie.
+			Example: response.cookie("username", username);
+		attribute()
+			Use to set and get a specific value.
+			Example: request.attribute("username", request.cookie("username"));
+				model.put("username", request.attribute("username"));
+		exception()
+			method use to catch an exception, and redirect to a page. return is not necessary from this exception handler.
+			Example:
+				exception(NotFoundException.class, (exception, request, response) -> {
+		            response.status(404);
+		            HandlebarsTemplateEngine engine = new HandlebarsTemplateEngine();
+		            String html = engine.render(new ModelAndView(null, "not-found.hbs"));
+		            response.body(html);
+		        } );
+	POJO 
+		Plain Old Java Object
+	HTTP middleware
+		A request comes in, and the framework first looks for any handler that should run before the request is processed. This handler has access to request and response, and it can add or change things, including stopping the request altogether. If things are to continue, the request is handled using the proper methods. Finally, any matching after-methods are run. Now this pattern is pretty powerful for things like authentication, like logging into a site with a username or a password.

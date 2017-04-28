@@ -81,3 +81,23 @@ Example: ./example_07.html
 		Mistype
 		IDs and classes mix up
 		Position error
+	HTML forms
+		The method attribute values should be get or post.
+		The action attribute the value is the relative or absolute url that will be use when the form is submitted.
+		Inside the form tag should appear any number of named input elements.
+		The name attribute inside the input tag is necessary and shouldn't be sustituted. 
+		Check for more input examples "./InputTypes.jpg".
+		Example:
+			<form method="post" action="/register">
+				<input type="text" name="username" placeholder="username">
+				<input type="password" name="password" placeholder="password">
+				<button type="summit">Register</button>
+			</form>
+	HTML Forms with File Uploads
+		An input element with the type "file" is added, and
+		The encryption type of the form element must be set to "multipart/form-data"
+			<form method="post" action="/update_profile" enctype="multipart/form-data">
+			  <input type="text" name="handle">
+			  <input type="file" name="avatar">
+			  <button type="submit">Upload</button>
+			</form>

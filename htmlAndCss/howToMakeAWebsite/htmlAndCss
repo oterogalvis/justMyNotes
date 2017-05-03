@@ -93,6 +93,9 @@ Example: ./example_07.html
 				<input type="password" name="password" placeholder="password">
 				<button type="summit">Register</button>
 			</form>
+		If you need to add a text instead a placeholder, like when you need to edit an entry, use 'value'.
+		Example:
+			<input type="text" name="body" value="{{ post.body }}">
 	HTML Forms with File Uploads
 		An input element with the type "file" is added, and
 		The encryption type of the form element must be set to "multipart/form-data"

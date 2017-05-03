@@ -203,6 +203,10 @@ Example: Example13.java
 		            String html = engine.render(new ModelAndView(null, "not-found.hbs"));
 		            response.body(html);
 		        } );
+		session()
+			Pocket that allows you to save information. 
+			Example: request.session().attribute(FLASH_MESSAGE_KEY);
+				session().removeAttribute(FLASH_MESSAGE_KEY);
 	POJO 
 		Plain Old Java Object
 	HTTP middleware

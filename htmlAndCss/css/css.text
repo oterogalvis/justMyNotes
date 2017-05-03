@@ -1,0 +1,11 @@
+CSS
+	Cascading Style Sheets
+	CSS reference
+		Visit:
+			Mozilla Developer Network (MDN)
+			WebPlatform.org
+	@import
+		Allow us to import from the header or another css file. Example: @import "import-styles.css"
+	Universal selector
+		* {}
+	

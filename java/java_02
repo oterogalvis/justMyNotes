@@ -211,3 +211,19 @@ Example: Example13.java
 		Plain Old Java Object
 	HTTP middleware
 		A request comes in, and the framework first looks for any handler that should run before the request is processed. This handler has access to request and response, and it can add or change things, including stopping the request altogether. If things are to continue, the request is handled using the proper methods. Finally, any matching after-methods are run. Now this pattern is pretty powerful for things like authentication, like logging into a site with a username or a password.
+Example: Example14.java
+	Java versatility
+		Java has an extensive presence on platforms of all types. These include mobile devices, enterprise systems like in banks or hospitals, or gadgets such as refrigerators or arduinos.
+	@Override
+		This annotation in Java instructs the compiler to verify proper inheritance. Specifically, it verifies proper overriding of methods. 
+	@Deprecated
+		This annotation allows us to mark methods, classes, and fields for future deletion, giving other developers a compiler message to update their code.
+	@SuppressWarnings
+		Deal with warnings that java compiler produce.
+	Especify directory for .class
+		Example to compile: javac -d out -cp src src/com/treehouse/override/Main.java
+		Example to run: java -cp out com/treehouse/override/Main.java
+	Xlint
+		Allow us to know not only the errors but the warnings.
+		Example: javac -Xlint -d out -cp src src/com/treehouse/override/Main.java
+	

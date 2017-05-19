@@ -8,4 +8,52 @@ CSS
 		Allow us to import from the header or another css file. Example: @import "import-styles.css"
 	Universal selector
 		* {}
-	
+	id selector
+		Target sigle element. Example: <p id="bla"></p> === #bla { border: 3px solid red; }
+	class selector
+		Target multiple elements. Example: <p class="bla"></p> === .bla { border: 3px solid red; }
+	Decendent selector
+		Target an element iside a element. Example: .main-header span { color: white; }
+	pseudo classes
+		Can target elements dynamically based on user interaction, an element’s state, and more. like :link :focus, or :hover.
+	TIP:
+		For keys like with you can use values like % datatype.
+		Set margins to be equals and take the same width. margin: auto;
+		Is ok to use the universal selector for box-sizing: border-box;
+	em
+		Relative length units are relative to other length values. The most commonly used relative unit is the em unit. The em is known as a font-relative unit because it's calculated based on a parent element's font size.
+	rem
+		The rem unit is similar to the em unit. The difference is that rem is relative only to the root element of the page. This gets us around the compounding font size issue we experience with em units.
+	rgb
+		Assign color with RGB values, also possible to add transparency. 
+		Example: color: rgb(255, 169, 73)  ||  rgba(255, 169, 73, .4)
+	generic fonts
+		serif, sans-serif, monospace, cursive, fantasy. When assigning a font family is a good practice to assign a generic font at the end as last resource. 
+		Example: font-family: "Helvetica Neue" Helvetica, Arial, sans-serif;
+			CSS Font Stack. Font stack generator for web safe fonts
+				http://www.cssfontstack.com/
+	Display value
+		block - elements that take the full width available
+			divs, parragraph, heading tags, or list items.
+		inline - only take as much width as they need
+		inline-block - elements are like inline elements but they can have a width and a height.
+			spang tags, immages, and anchor elements.
+		These can be modify with the display property.
+	css box
+		margin - border - padding - content
+	max width property
+		The element have a limit of how wide can be. max-width: 900px;
+	background repead property
+		we can control how our image is tail.
+	clearfix
+		.group:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	border radius
+		allow you to make the coners of the element circular
+	Media Query 
+		Allow us to enhance the browsing experience of websites on multiple devices and viewport sizes. This allows us to tailor our content to a wide range of devices without having to change anything in the HTML.
+		Example: @media (max-width: 960px) {}
+		HTML: <meta name="viewport" content="width=device-width">

@@ -66,7 +66,7 @@ Example: example03.java
 		To make a method that acept 0 to 1 argument you create two methods with the same name.
 		Differents kind of addition:
 			variable += 1 (The best and more recommended)
-			variable++ (return variable and sum after)
+			variable++ (return variable and then sum after)
 			++variable (sum first and then return the update value)
 		jshell: Shift + tab => autocomplete all the possible methods.
 	exceptions
@@ -89,7 +89,7 @@ Example: example04.java
 	TIP
 		"" are for strings 
 		'' are for char(characters)
-		You can sum stings.
+		You can sum strings.
 		Member variable: Can be create with a lowercase "m" at the beginning or can be call using "this."
 	indexOf()
 		Return the index of a specific char. If char not include in string return -1.
@@ -153,12 +153,13 @@ Example: Example05.java
 		Local Variables:
 			Variable that’s declared within the body of a method. Then you can use the variable only within that method. You can not use any kind of accessor (public, protected or private).
 		Parameters:
+			Recall that the signature for the main method is public static void main(String[] args). The important thing to remember is that parameters are always classified as "variables" not "fields". This applies to other parameter-accepting constructs as well (such as constructors and exception handlers) that you'll learn about later in the tutorial.
 Example: Example06.java
 	TIP
 		== is only for primitives (It can work with strings because the compiler create a single instance and makes all variables refer to the same instance, and keep all these variables in the "string pool", unless it's created using the constructor).
 		equals() is only for objects.
 	binary 
-		10101011 = 0 2 4 6 8 16 32 64
+		10101011 = 0 2 4 8 16 32 64 128
 		With 8 bits(== 1 byte), you can store just about any character (char) char A == 97, and char B is 98. 1024 bytes is 1KB, 1024 kilobytes is 1MB...
 	packages
 		Help us to make sure that our class names are distinguishable.

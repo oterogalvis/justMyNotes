@@ -43,6 +43,7 @@ public class Main {
 
     public static void usingMethodReferences() {
         List<Book> books = Books.all();
+//        Collections.sort(books, Comparator.comparing(book -> book.getTitle()));
         Collections.sort(books, Comparator.comparing(Book::getTitle));
         books.forEach(System.out::println);
     }

@@ -226,4 +226,94 @@ Example: Example14.java
 	Xlint
 		Allow us to know not only the errors but the warnings.
 		Example: javac -Xlint -d out -cp src src/com/treehouse/override/Main.java
-	
+	@SuppressWarnings
+		This annotation can be used to turn off compiler warnings - either all warnings or only certain ones. You want your code to compile with zero errors and zero warnings so that your attention can be quickly captured when a new warning pops up. Use only if warning pass the "imposible to eliminate" test.
+		Example: @SuppressWarnings("static"), @SuppressWarnings("fallthrough") || @SuppressWarnings({"static", fallthrough"})
+	Implementing an Annotation
+		Write the annotation
+		Add the annotation to classes and methods
+		Write code to check for the presence of annotations
+	JAR
+		Java archive, extension where a blunde of compiled java code is storage (like a zip). 
+		A jar file is an archive of Java bytecode and other resources that can be used as a library in your application, or as a standalone, runnable Java application.
+	The class path 
+		Is used for telling the Java Virtual Machine where to find your Java bytecode and libraries while running your application.
+	Dependencies
+		Are libraries that a project depends on (Maven and Gradle).
+    @Retention
+	    How long will the doc annotation be retained in Java files that use this. We also can write the actual name of the element '@Retention(value = RetentionPolicy.SOURCE)', if there is more elements in the annotation we'd create a comma separated list of name value pairs, '@Retention(value = RetentionPolicy.SOURCE, something = "stuff")'.
+	    1) @Retention(RetentionPolicy.SOURCE)
+	        We're telling the Java compiler to throw away the annotation upon compiling. This is how the override and suppress warnings annotations are defined. The compiler uses them to help it in compiling, and then throws them away. We might want to choose it if it's only important for compiler messages, but the annotations themselves wouldn't be available during run time to analyze their presence, so we won't be using source.
+	    2) @Retention(RetentionPolicy.CLASS)
+	        We're telling the compiler to retain the annotations in the byte code that the compiler produces. But with this option, the annotations are not loaded into the JVM while running the program. This means that, again, they're not available for analysis at run time.
+	    3) @Retention(RetentionPolicy.RUNTIME)
+            It means they're included in the compiled code and made available to the JVM upon running our application.
+    @Target
+        Where our annotation can be use. When we include the target annotation we need to specify element types. https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html
+        Example: @Target({ElementType.TYPE, ElementType.METHOD})
+    elements
+        Attributes of the annotation. The pieces you want our programmers to include when using our doc annotation. In general you'll declare element name as zero parameter, non-void methods. you wont need to add public since all interface methods in Java are public by default. Though this is technically an interface method declaration, they behave a bit more fields whose values are set when the annotation is added to a class or method. With this in mind, we can specify a default value for each element. If we do this, we are saying that the annotation, when added to a class or method, doesn't have to include a value for this element.
+        Example:    String desc() default "";
+                    String[] params() default {};
+                    String returnVal() default {};
+    Reflection
+        Is a programming technique that allows us to examine (and even modify) the structure of objects at run-time.
+    Method
+        Class that allow us to iterate the method of another class.
+        Example:    Class<?> clazz = TargetClass.class;
+                    Method[] methods = clazz.getDeclaredMethods();
+                    for (Method method : methods) {...}
+Example: Example15.java
+	Transitive dependencies
+		List of dependencies of a dependency.
+	The beans component 
+		Is the part of the spring framework that allows any Java object to be created and used in what's called the Servlet Container. The beans component will load your objects in a way that makes them usable, and even reusable, while your application is up and running on the web server.
+	Servlet Container 
+		Is the container of your entire running application on the web server. 
+	Context components 
+		@Configuration
+			Apply to classes that contain application configuration code.
+		@Controller
+			Apply to classes that handle request to specific URI's.
+		@ComponentScan
+			Tell the framework to scan our Java classes for things like controllers.
+	SpEL
+		Spring Expression Language
+		Lenguage that we put on our HTML templates that allow us to iterate over, perform operations, and format Java data for display.
+	AOP
+		Aspect-Oriented Programming
+		Component that allow us to cleanly apply funtionality to many, or all parts of our web application.
+	Dispatcher Servlet
+		Think of the Dispatcher Servlet as our application's usher, who is there to receive requests from the web server, and usher or dispatch them according to our configuration and code. When our code is done processing the request, the dispatcher servlet ushers the response to the door, handing it back to the web server to send it back to the client. Finally, there's the web component, from which we'll get the ability to capture a request to a specific resource and take action accordingly.
+	Repeat video
+		https://teamtreehouse.com/library/spring-basics/spring-components-and-configuring-our-app/a-highlevel-view-of-spring
+    URI
+        Uniform Resource Identifier
+    URL
+        Uniform Resource Locator
+    Thymeleaf
+        Is a templating engine that allows you to write HTML while including place holders for data that will come from Java objects. These place holders in our templates will leverage this spring expression language to access the fields of your job objects from its getters and setters.
+        Thymeleaf, expects HTML templates to be XML compliant, which in this specific case means that every opening tag must either have an associated closing tag, or must be self-closing.
+    POJO
+        Plain Old Java Object. A POJO is a Java object whose class is coded for its natural functionality and not for the framework which it will be used in. That means that the class is coded with fields, constructors, getters and setters, and methods that are useful to the object as it fits in with the other classes of your application.
+        It's a pretty classic class too. It had four fields, getters and setters for each field, and a constructor. There was nothing about the functionality of this class that couldn't be used outside of a spring application, or really outside of any framework. This is what made it truly a plain, old Java object.
+    Feeding Data to Our Thymeleaf Templates
+        Example: <img th:src="@{'/gifs/' + ${gif.name} + '.gif'}" alt="gif" />
+    Dependency injection (DI)
+        The process of this runtime creation of objects without explicitly writing code to construct and assign objects is called dependency injection or DI for short.
+    @Autowired
+        Allows DI. This tag will do an auto-scanning. Assuming each class that has to become a bean is annotated with a correct annotation like @Component (for simple bean) or @Controller (for a servlet control) or @Repository (for DAO classes) and these classes are somewhere under the package.
+    @Component
+        Allows to identify a class as component, useful if you need to @Autowire and instance of this class.
+    @PathVariable
+        Use in the method of the controller when you need to grab a variable from the url.
+            @RequestMapping("/gif/{name}")
+            public String gifDetails(@PathVariable String name, ModelMap modelMap) {...}
+    Format Thymeleaf template
+        th: is use to make the variable dinamic, basically allow it to accept java.
+        @{} indicate to the Thymeleaf engine that a URL should be generated.
+        ${} is use to get a java variable from the model, as long as getters and setters follow the convention.
+        '' is use to create string literals.
+            <a href="#" th:class="(${gif.favorite} ? 'un' : '') + 'mark favorite'"></a>
+    th:each
+        Allow you to iterate the HTML block including the tag where 'th:each' is located.

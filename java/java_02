@@ -58,7 +58,7 @@ Java
 			- Class can extend only one abstract class. A class can implement any number of interfaces.
 			- In abstract class keyword ‘abstract’ is mandatory to declare a method as an abstract. In an interface keyword ‘abstract’ is optional to declare a method as an abstract.
 			- Abstract  class can have  protected , public and public abstract methods. Interface can have only public abstract methods i.e. by default.
-			- Abstract class can have  static, final  or static final  variable with any access specifier	 interface  can  have only static final (constant) variable i.e. by default.
+			- Abstract class can have  static, final  or static final  variable with any access specifier interface  can  have only static final (constant) variable i.e. by default.
 	Inner class
 		Inner classes are helpful sometimes to create classes that depend on certain variables in a surrounding class, or parent class. This type of classes are ussualy protected. Example: Map.Entry 
 	Test rule "FIRST"
@@ -317,3 +317,4 @@ Example: Example15.java
             <a href="#" th:class="(${gif.favorite} ? 'un' : '') + 'mark favorite'"></a>
     th:each
         Allow you to iterate the HTML block including the tag where 'th:each' is located.
+Example: Example16.java

@@ -1,0 +1,47 @@
+Java
+	Benefits of an ORM
+		ORMs handle transactions for developers. This helps developers build robust applications. An ORM still uses SQL under the hood. 
+		The developer is only exposed to one programming language, generally the languages that they're building the application in.
+	Examples of ORMs
+		Hibernate for Java
+		CoreData for Objective-C or Swift
+		Django ORM for Python
+		ActiveRecord for Ruby
+	RDBMS
+		Relational DataBase Management System. The actual tool the vendor used as a databas provider, like : MySQL, PostgreSQL, and Oracle.
+	Class.forName(...)
+		Initialize any static behavior.
+		Method returns the Class object associated with the class or interface with the given string name.
+		A call to Class.forName("X") causes the class named X to be dynamically loaded (at runtime). A call to forName("X") causes the class named X to be initialized (i.e., JVM executes all its static block after class loading). Class.forName("X") returns the Class object associated with the "X" class. The returned Class object is not an instance of the "x" class itself.
+	Class.forName("your class name").newInstance() 
+		Is used when you want to get an instance form a class work similar to new, but it is useful when you want to get instance from a class in a jar file or remote server and you can not import it in compile time.ex: Class.forName("YOUR JDBC DRIVER").newInstance(), you can not import the JDBC class at compile time.
+	new vs Class.forName(...).newInstance();
+		A a = new A();
+			Calls the new operator and the constructor of A directly, where A is mentioned in the source text and has therefore already been loaded and initialized.
+		A a = (A) Class.forName("A").newInstance();
+			look to see if A has already been loaded
+			load it if necessary
+			initialize it if necessary
+			locate the no-args constructor via reflection
+			call the new operator and the no-args constructor via reflection
+			typecast the result to A
+	Java Database Connectivity (JDBC) 
+		Is an application programming interface (API) for the programming language Java, which defines how a client may access a database. It provides methods to query and update data in a database, and is oriented towards relational databases. A JDBC-to-ODBC bridge enables connections to any ODBC-accessible data source in the Java virtual machine (JVM) host environment.
+	The try-with-resources
+		The try-with-resources statement is a try statement that declares one or more resources. A resource is an object that must be closed after the program is finished with it. The try-with-resources statement ensures that each resource is closed at the end of the statement. Any object that implements java.lang.AutoCloseable, which includes all objects which implement java.io.Closeable, can be used as a resource.
+		Example:
+			try(<resources>) {...}
+	Hibernate
+		Session Factory
+			Is a fairly heavy weight object that contains the relationships between the application and a database. There is usually just one of these per application. It encapsulates all the objects related to mapping pojos to database tables and columns. Which is contained in the metadata sources object.
+		Session 
+			Represents an interaction with the database in which a live connection is established. We'll see that before performing any data operations we'll open a session. And when we're done interacting with the data we'll immediately close the session. These objects are lightweight and therefore, are created as needed.
+		Transaction 
+			Represents a unit of work that must be performed on the database, which might in compass several queries. For example, a database transaction performing a bank account transfer might involve deducting a hundred dollars from one account and adding it to another. If adding the hundred dollars to the second account fails, we want to undo the initial deduction. Otherwise the hundred dollars vanishes. In a transaction we begin the work, perform all the queries, and if they succeed, we commit the transaction, which finalizes all queries. If any part fails, we roll back the transaction which will reverse each query.
+		Criteria
+			To further filter those results, using methods that translate to the SQL Like or > or = operators. At their most basic level these Criteria translate to simple or compound WHERE clauses.
+	JPA
+		Set of interfaces that our ORM's can implement to provide data persistence.
+Example: Example17.java
+	TIP: You can use a ternary operator on a if statement. 
+		Example: if (ownerName != null ? !ownerName.equals(that.ownerName) : that.ownerName != null) return false;

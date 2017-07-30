@@ -19,7 +19,7 @@ Example: example00To02.example00.java
 	TIP
 		First declare a variable using it's data type, like String.
 		Then the set the variable un CamelCase.
-		Last asing the value.
+		Last assign the value.
 Example: example00To02.example01.java
 	runtime errors
 		Errors that only can be found when the program is running.

@@ -1,13 +1,9 @@
 package com.teamtreehouse.jobs;
 
-import java.awt.*;
-import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
-import java.util.function.BiFunction;
 import java.util.function.Function;
-import java.util.stream.Stream;
 
 public class RockPaperScissor {
     private static final String winMessage = "You win the game!";
@@ -53,13 +49,13 @@ public class RockPaperScissor {
     public static String determineWinner(String userChoice, String computerChoice) {
         String message = "";
         switch (userChoice) {
-            case rock :
+            case rock:
                 message = analizeChoice(computerChoice, scissor, winMessage, loseMessage);
                 break;
-            case scissor :
+            case scissor:
                 message = analizeChoice(computerChoice, paper, winMessage, loseMessage);
                 break;
-            case paper :
+            case paper:
                 message = analizeChoice(computerChoice, rock, winMessage, loseMessage);
                 break;
         }

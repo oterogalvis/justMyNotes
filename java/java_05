@@ -1,0 +1,45 @@
+Lambdas
+	function shape
+		A lambda has a shape, one determined by its parameters and return values (if any) and their types. Classes like Function, Supplier, Consumer, accept lambdas with specific shapes.
+	Supplier
+		A supplier object receives no arguments. We use an empty argument list to specify a lambda expression with no arguments. Tip: A Supplier provides values. We call get() on it to retrieve its value—it may return different values when called more than once.
+		Example:
+			static void display(Supplier<Integer> arg) {
+        		System.out.println(arg.get());
+    		}
+	Predicate
+		The term predicate is used in computer science to mean a boolean-returning method. A Predicate object receives one value and returns true or false.
+		Example:
+			list.removeIf(element -> element.startsWith("c"));
+	Consumer
+		Opposite a Supplier, a Consumer acts upon a value but returns nothing. It means a void method. We can use a consumer to call println or other void methods. Also: A Consumer can be used to mutate data, as in an array, ArrayList or even just a class field.
+		Example:
+			// This consumer calls a void method with the value.
+			Consumer<Integer> consumer = x -> display(x - 1);
+			// Use the consumer with three numbers.
+        	consumer.accept(1);
+        	consumer.accept(2);
+        	consumer.accept(3);
+    Function
+        So, when you define the function, you specify what type it expects and then the type of the return value. So as you can imagine, these are great for transforming values from one to another and going between types. The both can be strings but you can switch between types.
+        Example:
+			Function<Integer, Integer> function = element -> element + 1;
+    TIP:
+    	For more function shapes visit https://www.dotnetperls.com/lambda-java
+    Functional composition
+    	When you chain several functions together.
+    Streams
+    	Streams are a sequence of elements and make use of a functional lazy pipeline. Streams can run in parallel.
+    Objects::nonNull
+    	Return a boolean depending if the object is null.
+    IntStream.iterate()
+    	Allow you tu iterate in base on a number higher than 1. 
+    	Example: 
+    	IntStream.iterate(1, i -> i + pageSize).mapToObj(i -> String.format("%d %s", i, companies.get(i-1)))
+      	.limit(numPages).forEach(System.out::println);
+    .and()
+    	Is like && but applied to functional programming.
+    	Example: caJobChecker.and(App::isJuniorJob)
+    	Tip: for more info check https://teamtreehouse.com/library/higher-order-functions
+    .andThen()
+    	Get input from one function and pass it to the next one.

@@ -1,0 +1,100 @@
+JavaScript
+	let 
+		Is a JavaScript keyword that creates variables that can be reassigned.
+	<script></script>
+		HTML script tag allow you to write JS or point the location of the file. Is ok to have more than one script tags in the on a page.
+		Example: <script src="javaScript_01.js"></script>
+	console.log()
+		Allow us to write a message in the console. Example: console.log("Program complete")
+	TIP
+		Browsers run JavaScript code as soon as they encounter it. Putting the code after the page content assures that the page will display before the program runs.
+	var
+		Variables let you store, track and use information in a program.
+	prompt()
+		Gets input from user.
+	parseFloat()
+		Transform numeric values inside of a string or at the begining of a string into a float. 
+		Example: parseFloat('3.14'); => 3.14
+		Example: parseFloat('1.89 light years away'); => 1.89
+		Example: parseFloat('That is so 2004'); => NaN(Not A Number)
+	parseInt()
+		Transform numeric values inside of a string or at the begining of a string into a integer. Work as parseFloat().
+	==
+		Equality operator. 
+		Example: ("3" == 3) => true
+		Example: ('' == 0) => true
+	===
+		Strict equality operator. 
+		Example: ("3" === 3) => false
+		Example: ('' == 0) => false
+	!=
+		Not equal operator. 
+	!==
+		Strict not equal operator. 
+	function
+		The function keyword allow you to created a method.
+	global scope
+		When a variable is accessible anywhere inside a program, in the body of the program and within functions.
+	function scope
+		When a variable is accessible only inside a function.
+	Created errors
+		throw new Error('error message');
+	isNaN()
+		Function use to check if a values is not a number.
+	while()
+		Loop while a specific condition is met.
+	do {} while()
+		Different form the while loop, this loop runs the condition at least once, cuz the block is located before the evaluation of the argument.
+	for (var i = 0 ; i < 10 ; i += 1)
+		Loop that allow us to iterate throw an array or an index.
+	Arrays
+		List of any kinds of items. 
+		Example: var myArray = [ 'milk', 'butter', 'eggs'];
+			myArray[0] => 'milk'
+	push()
+		Allow you to add items at the end of the array.
+	unshift()
+		Allow you to add items at the beginning of the array.
+	pop()
+		Allow you to delete items at the end of the array.
+	shift()
+		Allow you to delete items at the beginning of the array.
+	join()
+		It allows to group an array of strings inside a single one string.
+		Example: array.join(', ');
+	concat()
+		Allows you to merge to arrays together.
+		Example: arrayA.concat(arrayB);
+	getElementById()
+		So this code tells the JavaScript interpreter to look at the current webpage and locate a tag with the ID output.
+		Example:
+			var outputDiv = document.getElementById('output');
+			outputDiv.innerHTML = message;
+	Object (Hashmap)
+		Example : 
+		var student = {
+			name : "Dave",
+			grades: [80, 85, 90, 95]
+		}
+		console.log(student['name']); || console.log(student.name);
+		student.newVariable = 'New variable in student object';
+	for (var i in iList)
+		Allow access to each property name and property value by looping through an object's keys.
+		Example:
+			// iterate throw key
+			for (var propName in student) {
+				console.log(propName);
+			}
+			// iterate throw value
+			for (var propName in student) {
+				console.log(student[propName]);
+			}
+	const
+		Short for constant, is a JavaScript keyword that creates a new variable with a value that cannot change. Const doesn't prevent complex objects like arrays and objects from being modified, it just prevents them from being reassigned or overwritten completely.
+	Let 
+		Allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope.
+	Arrow Function Syntax
+		const sayHi = () => {  return 'hi';} || const sayHi = () => 'hi';
+		const square = (x) => {  return x * x;} || const square = x => x * x;
+		const multiply = (x, y) => x * y;
+ 

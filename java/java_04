@@ -1,0 +1,27 @@
+Java
+	API
+		Stands for Application Programing Interface. Is a way of talking about code that makes it easier for things outside of our application to interact with our application. Why do we want to provide gateways like this? Well quite often our code is running on one server, or even just one kind of server, like a Java Virtual Machine, and we need to talk to it from somewhere outside. Maybe we have a server running for handling the scores of our game from all across the globe and want to be able to update scores whether our players are using a PC, a mobile device, or a tablet. We could write some sort of bridge or connection layer, but we might have to do that for every new device. Building a REST API that works with any external client anywhere on the Internet saves us a lot of headaches.
+	REST 
+		Stands for Representational State Transfer. REST sits on top of HTTP and defines how your API works. The web is, by design, stateless. This means that every request you make to a website is like meeting that site for the very first time. Imagine if your friends were like this. You'd have to introduce yourself before every time you spoke in a conversation. REST doesn't break this, and puts all of the work of remembering state on the client, which is your computer, or program. After each request the server forgets your client entirely. In fact, you might not even be talking to the same server each time. Your client though can and will hold on to whatever state information it needs, like authentication keys or previous end points.
+	Resources
+		In a REST API we have these things called resources. What's a resource? Usually it's a model in your application. Maybe, again, you're holding on to player scores for your game. So a player would be a resource, and so would a score. You might have other things too, like a match if they're playing against other players, or a seed if your game levels are randomly generated. These resources are things we want to be retrieved, created, or modified through our API. We do that retrieving, creating, and modifying and even deleting at specific URIs which are called endpoints.
+	Endpoints
+		Endpoints represent either a single record or a collection of records. For example:
+		/api/v1/games
+		/api/v1/games/2312
+		these two endpoints represent a collection of games and a single game. We know that the second URL is a single resource because of the identifier at the end of it. The first one doesn't have anything that makes it specific. 
+		/api/v1/player
+		/api/v1/2312/player
+		These new URIs don't look great, do they? I mean, we can infer that the top one is again a list or a collection URI. And the bottom one is a detail but they've changed the design quite a bit. That second one should have the ID after the resource type. And really if we're going to use games we should use players. Typically your resource name should be plural, since the default action is to get a collection and you wouldn't call a collection of players player.
+		/api/v1/players
+		/api/v1/players/2312
+		Whether you use singular or plural names for your resources, keeping your URL design consistent goes a long way toward the discoverability and usability of your API.
+	HTTP Methods used in REST API
+		GET
+		POST
+		PUT
+		DELETE
+	Requests
+		The requests that our users send in, can give us a lot more information than just our endpoints and HTTP verbs can. We can use different aspects of the requests to change the format of our response, the version of the API and more. A lot of early APIs did all of this extra work through a part of the URL known as the query or query string. You've likely seen this before, but if you haven't, it shows up at the end of the URL and starts with a question mark. 
+		/api/v1/games?order=desc&sort=points
+		Everything after the question mark is treated as a set of key and value pairs. The example query string gives us two keys, order and sort. And two values, desc for the sending and points. Likely this would cause us to send back a collection of games sorted by their points in descending order. There's nothing stopping you from doing all of your extra work in the query string but it's not always the best approach. 
